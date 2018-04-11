@@ -21,6 +21,16 @@ import Diabetes from './components/diabetes.js';
 // import DoSomething from './components/doSomething.js';
 import Everyone from './components/everyone.js';
 import Everything from './components/everything.js';
+import Fascinating from './components/fascinating.js';
+import Field from './components/field.js';
+import Flying from './components/flying.js';
+import Fyyff from './components/fyyff.js';
+import Gfy from './components/gfy.js';
+import Give from './components/give.js';
+import Greed from './components/greed.js';
+import Horse from './components/horse.js';
+import Immensity from './components/immensity.js';
+import Ing from './components/ing.js';
 import Off from './components/off.js';
 import './App.css';
 
@@ -58,6 +68,16 @@ class App extends Component {
         {/* <DoSomething /><Divider /> */}
         <Everyone /><Divider />
         <Everything /><Divider />
+        <Fascinating /><Divider />
+        <Field /><Divider />
+        <Flying /><Divider />
+        <Fyyff /><Divider />
+        <Gfy /><Divider />
+        <Give /><Divider />
+        <Greed /><Divider />
+        <Horse /><Divider />
+        <Immensity /><Divider />
+        <Ing /><Divider />
         <Off /><Divider />
       </div>
     );
