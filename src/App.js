@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 // import Name from './Name.js';
 // import From from './From.js';
+import RaisedButton from 'material-ui/RaisedButton';
 import './App.css';
 
-// const api_key = "4c45241c2eea5ed3ae3b2fe6e1549305"
 
 class App extends Component {
   constructor(props) {
@@ -74,26 +74,24 @@ class App extends Component {
         <form>
           <label>
             First Name:
-            <input name="name" className="name" type="input"
+            <input name="name" className="name" type="input" style={{margin: 5}}
               onChange={this.handleChange} />
           </label>
           <br />
-          <label>
+          <label style={{marginLeft: 42}}>
             From:
-            <input name="from" className="from" type="input"
+            <input name="from" className="from" type="input" style={{margin: 5}}
               onChange={this.handleChange} />
-          </label><br/>
+          </label><br />
           {/* <Name
               name={this.state.value}
             />
             <From
             from={this.state.value}
           /> */}
-          <button onClick={this.handleSubmit} value="Submit">Submit</button>
-          {/* <button onClick="document.getElementById('myInput').value = ''">Reset */}
-          {/* </button> */}
+          <RaisedButton label="Submit" style={{marginLeft: 110, marginTop: 10}} onClick={this.handleSubmit} value="Submit" />
         </form>
-        <div className="container">
+        <div className="container" style={{margin: 10}}>
           <h1>{this.state.message}</h1>
           <h3>{this.state.subtitle}</h3>
         </div>
