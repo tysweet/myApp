@@ -18,7 +18,6 @@ import Cup from './components/cup.js';
 import Dalton from './components/dalton.js';
 import Deraadt from './components/deraadt.js';
 import Diabetes from './components/diabetes.js';
-// import DoSomething from './components/doSomething.js';
 import Everyone from './components/everyone.js';
 import Everything from './components/everything.js';
 import Fascinating from './components/fascinating.js';
@@ -31,7 +30,21 @@ import Greed from './components/greed.js';
 import Horse from './components/horse.js';
 import Immensity from './components/immensity.js';
 import Ing from './components/ing.js';
+import Keep from './components/keep.js';
+import KeepCalm from './components/keepCalm.js';
+import King from './components/king.js';
+import Life from './components/life.js';
+import Linus from './components/linus.js';
+import Look from './components/look.js';
+import Looking from './components/looking.js';
+import Madison from './components/madison.js';
+import Maybe from './components/maybe.js';
+import Me from './components/me.js';
+import Mornin from './components/mornin.js';
+import No from './components/no.js';
+import Nugget from './components/nugget.js';
 import Off from './components/off.js';
+import OffWith from './components/offWith.js';
 import './App.css';
 
 
@@ -65,7 +78,6 @@ class App extends Component {
         <Dalton /><Divider />
         <Deraadt /><Divider />
         <Diabetes /><Divider />
-        {/* <DoSomething /><Divider /> */}
         <Everyone /><Divider />
         <Everything /><Divider />
         <Fascinating /><Divider />
@@ -78,7 +90,21 @@ class App extends Component {
         <Horse /><Divider />
         <Immensity /><Divider />
         <Ing /><Divider />
+        <Keep /><Divider />
+        <KeepCalm /><Divider />
+        <King /><Divider />
+        <Life /><Divider />
+        <Linus /><Divider />
+        <Look /><Divider />
+        <Looking /><Divider />
+        <Madison /><Divider />
+        <Maybe /><Divider />
+        <Me /><Divider />
+        <Mornin /><Divider />
+        <No /><Divider />
+        <Nugget /><Divider />
         <Off /><Divider />
+        <OffWith /><Divider />
       </div>
     );
   }
