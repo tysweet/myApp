@@ -7,7 +7,7 @@ class OffWith extends Component {
     super(props);
     this.state = {
       value: '',
-      behavior: 'your shit',
+      behavior: 'your shit.',
       from: 'Mom',
     };
     this.handleChange = this.handleChange.bind(this);

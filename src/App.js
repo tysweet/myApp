@@ -45,6 +45,35 @@ import No from './components/no.js';
 import Nugget from './components/nugget.js';
 import Off from './components/off.js';
 import OffWith from './components/offWith.js';
+import Outside from './components/outside.js';
+import Particular from './components/particular.js';
+import Pink from './components/pink.js';
+import Problem from './components/problem.js';
+import Programmer from './components/programmer.js';
+import Pulp from './components/pulp.js';
+import Question from './components/question.js';
+import Retard from './components/retard.js';
+import Ridiculous from './components/ridiculous.js';
+import Rtfm from './components/rtfm.js';
+import Sake from './components/sake.js';
+import Shakespeare from './components/shakespeare.js';
+import Shit from './components/shit.js';
+import ShutUp from './components/shutup.js';
+import Single from './components/single.js';
+import Thanks from './components/thanks.js';
+import That from './components/that.js';
+import Think from './components/think.js';
+import Thinking from './components/thinking.js';
+import This from './components/this.js';
+import Thumbs from './components/thumbs.js';
+import Too from './components/too.js';
+import Tucker from './components/tucker.js';
+import What from './components/what.js';
+import Xmas from './components/xmas.js';
+import Yoda from './components/yoda.js';
+import You from './components/you.js';
+import Zayn from './components/zayn.js';
+import Zero from './components/zero.js';
 import './App.css';
 
 
@@ -105,6 +134,35 @@ class App extends Component {
         <Nugget /><Divider />
         <Off /><Divider />
         <OffWith /><Divider />
+        <Outside /><Divider />
+        <Particular /><Divider />
+        <Pink /><Divider />
+        <Problem /><Divider />
+        <Programmer /><Divider />
+        <Pulp /><Divider />
+        <Question /><Divider />
+        <Retard /><Divider />
+        <Ridiculous /><Divider />
+        <Rtfm /><Divider />
+        <Sake /><Divider />
+        <Shakespeare /><Divider />
+        <Shit /><Divider />
+        <ShutUp /><Divider />
+        <Single /><Divider />
+        <Thanks /><Divider />
+        <That /><Divider />
+        <Think /><Divider />
+        <Thinking /><Divider />
+        <This /><Divider />
+        <Thumbs /><Divider />
+        <Too /><Divider />
+        <Tucker /><Divider />
+        <What /><Divider />
+        <Xmas /><Divider />
+        <Yoda /><Divider />
+        <You /><Divider />
+        <Zayn /><Divider />
+        <Zero /><Divider />
       </div>
     );
   }
