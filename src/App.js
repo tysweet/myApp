@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
+import Alert from './components/alert.js';
 import Divider from 'material-ui/Divider';
-import Anyway from './components/anyway.js';
 import Asshole from './components/asshole.js';
 import Awesome from './components/awesome.js';
 import Back from './components/back.js';
 import Bag from './components/bag.js';
-import Ballmer from './components/ballmer.js';
 import Bday from './components/bday.js';
 import Because from './components/because.js';
 import BlackAdder from './components/blackadder.js';
 import Bucket from './components/bucket.js';
 import CanIUse from './components/canIUse.js';
 import Chainsaw from './components/chainsaw.js';
-import Cocksplat from './components/cocksplat.js';
 import Cool from './components/cool.js';
 import Cup from './components/cup.js';
 import Dalton from './components/dalton.js';
-import Deraadt from './components/deraadt.js';
 import Diabetes from './components/diabetes.js';
 import Everyone from './components/everyone.js';
 import Everything from './components/everything.js';
@@ -52,7 +49,6 @@ import Problem from './components/problem.js';
 import Programmer from './components/programmer.js';
 import Pulp from './components/pulp.js';
 import Question from './components/question.js';
-import Retard from './components/retard.js';
 import Ridiculous from './components/ridiculous.js';
 import Rtfm from './components/rtfm.js';
 import Sake from './components/sake.js';
@@ -87,25 +83,22 @@ class App extends Component {
   render() {
     return (
       <div>
-        <header><h1>FOAAS</h1></header>
+        <Alert />
+        <header><h1>Fuck Off As A Service</h1></header>
         <Divider />
-        <Anyway /><Divider />
         <Asshole /><Divider />
         <Awesome /><Divider />
         <Back /><Divider />
         <Bag /><Divider />
-        <Ballmer /><Divider />
         <Bday /><Divider />
         <Because /><Divider />
         <BlackAdder /><Divider />
         <Bucket /><Divider />
         <CanIUse /><Divider />
         <Chainsaw /><Divider />
-        <Cocksplat /><Divider />
         <Cool /><Divider />
         <Cup /><Divider />
         <Dalton /><Divider />
-        <Deraadt /><Divider />
         <Diabetes /><Divider />
         <Everyone /><Divider />
         <Everything /><Divider />
@@ -141,7 +134,6 @@ class App extends Component {
         <Programmer /><Divider />
         <Pulp /><Divider />
         <Question /><Divider />
-        <Retard /><Divider />
         <Ridiculous /><Divider />
         <Rtfm /><Divider />
         <Sake /><Divider />

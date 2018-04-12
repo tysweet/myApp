@@ -7,7 +7,7 @@ class Thumbs extends Component {
     super(props);
     this.state = {
       value: '',
-      name: 'Bob',
+      name: 'Me',
       from: 'Mom',
     };
     this.handleChange = this.handleChange.bind(this);

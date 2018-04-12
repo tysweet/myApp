@@ -1,28 +1,58 @@
-.App {
+header {
+  font-family: 'Great Vibes', cursive;
+  font-size: 56px;
+  height: 200px;
   text-align: center;
+  /* padding: 20px; */
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+sidebar {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transition: transform .3s ease-out;
+  Webkit-transition: -webkit-transform .3s ease-out;
+  will-change: transform;
+  overflow-y: auto;
 }
 
-.App-title {
-  font-size: 1.5em;
+content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  Webkitoverflowscrolling: touch;
+  transition: left .3s ease-out, right .3s ease-out;
 }
 
-.App-intro {
-  font-size: large;
+overlay {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease-out, visibility .3s ease-out;
+  background-color: rgba(0,0,0,.3);
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+dragHandle {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
 }
