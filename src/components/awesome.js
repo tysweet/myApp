@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
+import SendSMS from '../send_sms.js';
 import '../App.css';
 
 class Awesome extends Component {
@@ -11,6 +12,7 @@ class Awesome extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleTweet = this.handleTweet.bind(this);
   }
 
   componentDidMount() {
@@ -47,6 +49,24 @@ class Awesome extends Component {
     this.componentDidMount();
   }
 
+  handleTweet(event) {
+    const message = this.state.message;
+    const subtitle = this.state.subtitle;
+    fetch (`https://api.twitter.com/1.1/${message}+${subtitle}/update.json`, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+    })
+    .then((results) => {
+        return results.json();
+    })
+    .then((json) => {
+      
+    }
+  )
+  }
 
 
   render() {
@@ -59,10 +79,12 @@ class Awesome extends Component {
               onChange={this.handleChange} />
           </label><br />
           <RaisedButton label="Submit" style={{marginLeft: 110, marginTop: 10}} onClick={this.handleSubmit} value="Submit" />
-        </form>
+          
+          </form>
         <div className="container" style={{margin: 10}}>
           <h1>{this.state.message}</h1>
           <h3>{this.state.subtitle}</h3>
+          <RaisedButton label="Tweet" onClick={this.handleTweet} value="Submit" />
         </div>
       </div>
     );

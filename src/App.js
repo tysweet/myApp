@@ -70,6 +70,7 @@ import Yoda from './components/yoda.js';
 import You from './components/you.js';
 import Zayn from './components/zayn.js';
 import Zero from './components/zero.js';
+import SendSMS from './send_sms.js';
 import './App.css';
 
 
@@ -83,10 +84,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Alert />
+        {/* <Alert /> */}
         <header><h1>Fuck Off As A Service</h1></header>
         <Divider />
-        <Asshole /><Divider />
+        <Asshole />
+        <Divider />
         <Awesome /><Divider />
         <Back /><Divider />
         <Bag /><Divider />
