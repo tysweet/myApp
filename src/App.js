@@ -87,7 +87,7 @@ class App extends Component {
       <div>
         {/* <Alert /> */}
         <DrawerUndockedExample />
-        <header><h1>F O A A S</h1></header>
+        <header><h1>Fuck Off - As A Service!</h1></header>
         <Divider />
         <Asshole />
         <Divider />
