@@ -56,6 +56,7 @@ class Off extends Component {
   render() {
     return (
       <div style={{marginTop: 20}}>
+      <a id="off"></a>
         <form>
           <label style={{marginLeft: 37}}>
             Name:

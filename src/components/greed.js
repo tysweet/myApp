@@ -56,6 +56,7 @@ class Greed extends Component {
   render() {
     return (
       <div style={{marginTop: 20}}>
+      <a id="greed"></a>
         <form>
           <label style={{marginLeft: 38}}>
             Noun:

@@ -56,6 +56,7 @@ class Gfy extends Component {
   render() {
     return (
       <div style={{marginTop: 20}}>
+      <a id="gfy"></a>
         <form>
           <label style={{marginLeft: 38}}>
             Name:

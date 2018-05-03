@@ -56,6 +56,7 @@ class KeepCalm extends Component {
   render() {
     return (
       <div style={{marginTop: 20}}>
+      <a id="keepcalm"></a>
         <form>
           <label style={{marginLeft: 38}}>
             Reaction:

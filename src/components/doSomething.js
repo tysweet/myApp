@@ -60,6 +60,7 @@ class DoSomething extends Component {
   render() {
     return (
       <div style={{marginTop: 20}}>
+      <a id="dosomething"></a>
         <form>
           <label style={{marginLeft: 38}}>
             Do:

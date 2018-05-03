@@ -56,6 +56,7 @@ class King extends Component {
   render() {
     return (
       <div style={{marginTop: 20}}>
+      <a id="king"></a>
         <form>
           <label style={{marginLeft: 38}}>
             Name:

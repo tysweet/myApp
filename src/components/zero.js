@@ -52,6 +52,7 @@ class Zero extends Component {
   render() {
     return (
       <div style={{marginTop: 20}}>
+      <a id="zero"></a>
         <form>
           <label style={{marginLeft: 42}}>
             From:

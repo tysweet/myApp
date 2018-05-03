@@ -72,6 +72,7 @@ import Zayn from './components/zayn.js';
 import Zero from './components/zero.js';
 import SendSMS from './send_sms.js';
 import './App.css';
+import DrawerUndockedExample from './sideNav.js';
 
 
 class App extends Component {
@@ -85,7 +86,8 @@ class App extends Component {
     return (
       <div>
         {/* <Alert /> */}
-        <header><h1>Fuck Off As A Service</h1></header>
+        <DrawerUndockedExample />
+        <header><h1>F O A A S</h1></header>
         <Divider />
         <Asshole />
         <Divider />

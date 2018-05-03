@@ -52,6 +52,7 @@ class No extends Component {
   render() {
     return (
       <div style={{marginTop: 20}}>
+      <a id="no"></a>
         <form>
           <label style={{marginLeft: 42}}>
             From:

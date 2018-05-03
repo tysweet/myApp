@@ -56,6 +56,7 @@ class Keep extends Component {
   render() {
     return (
       <div style={{marginTop: 20}}>
+      <a id="keep"></a>
         <form>
           <label style={{marginLeft: 38}}>
             Name:

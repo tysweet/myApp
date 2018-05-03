@@ -52,6 +52,7 @@ class Give extends Component {
   render() {
     return (
       <div style={{marginTop: 20}}>
+      <a id="give"></a>
         <form>
           <label style={{marginLeft: 42}}>
             From:
