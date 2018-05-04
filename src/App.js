@@ -15,6 +15,7 @@ import Cool from './components/cool.js';
 import Cup from './components/cup.js';
 import Dalton from './components/dalton.js';
 import Diabetes from './components/diabetes.js';
+import DoSomething from './components/doSomething.js';
 import Everyone from './components/everyone.js';
 import Everything from './components/everything.js';
 import Fascinating from './components/fascinating.js';
@@ -104,6 +105,7 @@ class App extends Component {
         <Cup /><Divider />
         <Dalton /><Divider />
         <Diabetes /><Divider />
+        <DoSomething /><Divider />
         <Everyone /><Divider />
         <Everything /><Divider />
         <Fascinating /><Divider />

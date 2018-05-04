@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import '../App.css';
+import tweet from '../img/tweet.png';
 
 class DoSomething extends Component {
   constructor(props) {
@@ -60,31 +61,32 @@ class DoSomething extends Component {
   render() {
     return (
       <div style={{marginTop: 20}}>
-      <a id="dosomething"></a>
-        <form>
-          <label style={{marginLeft: 38}}>
-            Do:
-            <input name="name" className="name" type="input" style={{margin: 5}}
-              onChange={this.handleChange} />
-          </label>
-          <br />
-          <label style={{marginLeft: 12}}>
-            Something:
-            <input name="something" className="something" type="input" style={{margin: 5}}
-              onChange={this.handleChange} />
-          </label>
-          <br />
-          <label style={{marginLeft: 42}}>
-            From:
-            <input name="from" className="from" type="input" style={{margin: 5}}
-              onChange={this.handleChange} />
-          </label><br />
-          <RaisedButton label="Submit" style={{marginLeft: 110, marginTop: 10}} onClick={this.handleSubmit} value="Submit" />
-        </form>
-        <div className="container" style={{margin: 10}}>
-          <h1>{this.state.message}</h1>
-          <h3>{this.state.subtitle}</h3>
-        </div>
+        <a id="dosomething"></a>
+          <div className="container">
+            <h1>{this.state.message}</h1>
+            <h3>{this.state.subtitle}</h3>
+          </div>
+          <form>
+            <label style={{marginLeft: 98}}>
+              Change Do:
+              <input name="name" className="name" type="input" style={{margin: 5}}
+                onChange={this.handleChange} />
+            </label><br />
+            <label style={{marginLeft: 42}}>
+              Change Something:
+              <input name="something" className="something" type="input" style={{margin: 5}}
+                onChange={this.handleChange} />
+            </label><br />
+            <label style={{marginLeft: 82}}>
+              Change From:
+              <input name="from" className="from" type="input" style={{margin: 5}}
+                onChange={this.handleChange} />
+            </label><br />
+            <RaisedButton label="Submit" secondary={true} style={{marginLeft: 150, marginTop: 10}} onClick={this.handleSubmit} value="Submit" />
+          </form><br />
+          <a className="twitterButton" 
+            href={`https://twitter.com/intent/tweet?text=${this.state.message}%20${this.state.subtitle}`} 
+            target="_blank"><img src={tweet} alt={'Twitter Button'} style={{marginLeft: 45}}></img></a>
       </div>
     );
   }
