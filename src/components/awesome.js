@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import SendSMS from '../send_sms.js';
 import '../App.css';
+import tweet from '../img/tweet.png';
 
 class Awesome extends Component {
   constructor(props) {
@@ -72,20 +73,21 @@ class Awesome extends Component {
   render() {
     return (
       <div style={{marginTop: 20}}>
-      <a id="awesome"></a>
-        <form>
-          <label style={{marginLeft: 42}}>
-            From:
-            <input name="from" className="from" type="input" style={{margin: 5}}
-              onChange={this.handleChange} />
-          </label><br />
-          <RaisedButton label="Submit" style={{marginLeft: 110, marginTop: 10}} onClick={this.handleSubmit} value="Submit" />
-          
-          </form>
-        <div className="container" style={{margin: 10}}>
+        <a id="awesome"></a>
+        <div className="container">
           <h1>{this.state.message}</h1>
           <h3>{this.state.subtitle}</h3>
-          <RaisedButton label="Tweet" onClick={this.handleTweet} value="Submit" />
+          <form>
+            <label style={{marginLeft: 42}}>
+              Change From:
+              <input name="from" className="from" type="input" style={{margin: 5}}
+                onChange={this.handleChange} />
+            </label><br />
+            <RaisedButton label="Submit" secondary={true} style={{marginLeft: 110, marginTop: 10}} onClick={this.handleSubmit} value="Submit" />
+          </form><br/>
+            <a className="twitterButton" 
+            href={`https://twitter.com/intent/tweet?text=${this.state.message}%20${this.state.subtitle}`} 
+            target="_blank"><img src={tweet} alt={'Twitter Button'}></img></a>
         </div>
       </div>
     );

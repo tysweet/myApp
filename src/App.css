@@ -74,6 +74,15 @@ dragHandle {
   transition-duration: 2s; 
 }
 
+.container {
+  margin-left: 40px;
+}
+
+.twitterButton img {
+  width: 105px;
+  height: 43px;
+}
+
 #myBtn {
   display: none; 
   position: fixed; 
