@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import '../App.css';
+import tweet from '../img/tweet.png';
 
 class Mornin extends Component {
   constructor(props) {
     super(props);
     this.state = {
       value: '',
-      from: 'Mom',
+      from: 'Satan',
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -52,18 +53,21 @@ class Mornin extends Component {
   render() {
     return (
       <div style={{marginTop: 20}}>
-      <a id="mornin"></a>
-        <form>
-          <label style={{marginLeft: 42}}>
-            From:
-            <input name="from" className="from" type="input" style={{margin: 5}}
-              onChange={this.handleChange} />
-          </label><br />
-          <RaisedButton label="Submit" style={{marginLeft: 110, marginTop: 10}} onClick={this.handleSubmit} value="Submit" />
-        </form>
-        <div className="container" style={{margin: 10}}>
+        <a id="mornin"></a>
+        <div className="container">
           <h1>{this.state.message}</h1>
           <h3>{this.state.subtitle}</h3>
+          <form>
+            <label style={{marginLeft: 42}}>
+              Change From:
+              <input name="from" className="from" type="input" style={{margin: 5}}
+                onChange={this.handleChange} />
+            </label><br />
+            <RaisedButton label="Submit" secondary={true} style={{marginLeft: 110, marginTop: 10}} onClick={this.handleSubmit} value="Submit" />
+          </form><br/>
+            <a className="twitterButton" 
+            href={`https://twitter.com/intent/tweet?text=${this.state.message}%20${this.state.subtitle}`} 
+            target="_blank"><img src={tweet} alt={'Twitter Button'}></img></a>
         </div>
       </div>
     );
