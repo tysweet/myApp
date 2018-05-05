@@ -14,6 +14,7 @@ class DoSomething extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleShout = this.handleShout.bind(this);
   }
 
   componentDidMount() {
@@ -21,6 +22,27 @@ class DoSomething extends Component {
     const something = this.state.something;
     const from = this.state.from;
     fetch(`http://foaas.com/dosomething/${doNow}/${something}/${from}`, {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+    })
+    .then((results) => {
+        return results.json();
+    })
+    .then((json) => {
+      let message = json.message;
+      let subtitle = json.subtitle;
+      this.setState({message: message});
+      this.setState({subtitle: subtitle});
+    })
+  }
+
+  componentWillShout() {
+    const doNow = this.state.do;
+    const something = this.state.something;
+    const from = this.state.from;
+    fetch(`http://foaas.com/dosomething/${doNow}/${something}/${from}?shoutcloud`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -56,7 +78,16 @@ class DoSomething extends Component {
     this.componentDidMount();
   }
 
-
+  handleShout(event) {
+    event.preventDefault();
+    const newDo = this.state.do;
+    const newSomething = this.state.something;
+    const newFrom = this.state.from;
+    this.setState({name: newDo});
+    this.setState({name: newSomething});
+    this.setState({from: newFrom});
+    this.componentWillShout();
+  }
 
   render() {
     return (
@@ -67,22 +98,23 @@ class DoSomething extends Component {
             <h3>{this.state.subtitle}</h3>
           </div>
           <form>
-            <label style={{marginLeft: 98}}>
+            <label style={{marginLeft: 148}}>
               Change Do:
               <input name="name" className="name" type="input" style={{margin: 5}}
                 onChange={this.handleChange} />
             </label><br />
-            <label style={{marginLeft: 42}}>
+            <label style={{marginLeft: 92}}>
               Change Something:
               <input name="something" className="something" type="input" style={{margin: 5}}
                 onChange={this.handleChange} />
             </label><br />
-            <label style={{marginLeft: 82}}>
+            <label style={{marginLeft: 132}}>
               Change From:
               <input name="from" className="from" type="input" style={{margin: 5}}
                 onChange={this.handleChange} />
             </label><br />
-            <RaisedButton label="Submit" secondary={true} style={{marginLeft: 150, marginTop: 10}} onClick={this.handleSubmit} value="Submit" />
+            <RaisedButton label="Submit" default={true} style={{marginLeft: 150, marginTop: 10}} onClick={this.handleSubmit} value="Submit" />
+            <RaisedButton label="Shout!!" secondary={true} style={{marginLeft: 20, marginTop: 10}} onClick={this.handleShout} value="Submit" />
           </form><br />
           <a className="twitterButton" 
             href={`https://twitter.com/intent/tweet?text=${this.state.message}%20${this.state.subtitle}`} 
