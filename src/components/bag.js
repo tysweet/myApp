@@ -12,7 +12,7 @@ class Bag extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleShout = this.handleShout.bind(this);
   }
 
   componentDidMount() {
