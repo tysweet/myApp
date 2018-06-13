@@ -7,7 +7,7 @@ import Back from './components/back.js';
 import Bag from './components/bag.js';
 import Bday from './components/bday.js';
 import Because from './components/because.js';
-import BlackAdder from './components/blackadder.js';
+// import BlackAdder from './components/blackadder.js';
 import Bucket from './components/bucket.js';
 import CanIUse from './components/canIUse.js';
 import Chainsaw from './components/chainsaw.js';
@@ -73,7 +73,7 @@ import Zayn from './components/zayn.js';
 import Zero from './components/zero.js';
 import SendSMS from './send_sms.js';
 import './App.css';
-import DrawerUndockedExample from './sideNav.js';
+import DrawerUndockedExample from './components/sideNav.js';
 
 
 class App extends Component {
@@ -88,7 +88,7 @@ class App extends Component {
       <div>
         {/* <Alert /> */}
         <DrawerUndockedExample />
-        <header><h1>Fuck Off - As A Service!</h1></header>
+        <header><h1>F*** Off - As A Service!</h1></header>
         <Divider />
         <Asshole />
         <Divider />
@@ -97,7 +97,7 @@ class App extends Component {
         <Bag /><Divider />
         <Bday /><Divider />
         <Because /><Divider />
-        <BlackAdder /><Divider />
+        {/* <BlackAdder /><Divider /> */}
         <Bucket /><Divider />
         <CanIUse /><Divider />
         <Chainsaw /><Divider />

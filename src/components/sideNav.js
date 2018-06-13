@@ -2,7 +2,7 @@ import React from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
-import './App.css';
+import '../App.css';
 
 export default class DrawerUndockedExample extends React.Component {
 
@@ -19,26 +19,26 @@ export default class DrawerUndockedExample extends React.Component {
     return (
       <div>
         <div className = 'menuButton' onClick={this.handleToggle}>
-          The
-          <img className = 'middleFinger' src={ require(`./img/1f595.png`) } 
-            onClick={this.handleToggle} />
+          The Freaking Menu
+          {/* <img className = 'middleFinger' src={ require(`./img/1f595.png`) }  
+             onClick={this.handleToggle} />
           Fucking
-          <img className = 'middleFinger' src={ require(`./img/1f595.png`) } 
-            onClick={this.handleToggle} />
-          Menu
+           <img className = 'middleFinger' src={ require(`./img/1f595.png`) } 
+             onClick={this.handleToggle} />
+          Menu*/}
         </div>
         <Drawer
           docked={false}
           width={200}
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})}>
-          <MenuItem onClick={this.handleClose} href="#asshole">Asshole</MenuItem>
+          <MenuItem onClick={this.handleClose} href="#asshole">Icehole</MenuItem>
           <MenuItem onClick={this.handleClose} href="#awesome">Awesome</MenuItem>
           <MenuItem onClick={this.handleClose} href="#back">Back</MenuItem>
           <MenuItem onClick={this.handleClose} href="#bag">Bag</MenuItem>
           <MenuItem onClick={this.handleClose} href="#bday">Birthday</MenuItem>
           <MenuItem onClick={this.handleClose} href="#because">Because</MenuItem>
-          <MenuItem onClick={this.handleClose} href="#blackadder">Black Adder</MenuItem>
+          {/*<MenuItem onClick={this.handleClose} href="#blackadder">Black Adder</MenuItem>*/}
           <MenuItem onClick={this.handleClose} href="#bucket">Bucket</MenuItem>
           <MenuItem onClick={this.handleClose} href="#caniuse">Can I Use?</MenuItem>
           <MenuItem onClick={this.handleClose} href="#chainsaw">Chainsaw</MenuItem>
@@ -86,7 +86,7 @@ export default class DrawerUndockedExample extends React.Component {
           <MenuItem onClick={this.handleClose} href="#rtfm">RTFM</MenuItem>
           <MenuItem onClick={this.handleClose} href="#sake">Sake</MenuItem>
           <MenuItem onClick={this.handleClose} href="#shakespeare">Shakespeare</MenuItem>
-          <MenuItem onClick={this.handleClose} href="#shit">Shit</MenuItem>
+          <MenuItem onClick={this.handleClose} href="#shit">F.T.S.</MenuItem>
           <MenuItem onClick={this.handleClose} href="#shutup">Shut Up</MenuItem>
           <MenuItem onClick={this.handleClose} href="#single">Single</MenuItem>
           <MenuItem onClick={this.handleClose} href="#thanks">Thanks</MenuItem>
