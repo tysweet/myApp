@@ -8,7 +8,7 @@ class Gfy extends Component {
     super(props);
     this.state = {
       value: '',
-      name: 'son',
+      name: 'Dave',
       from: 'Mom',
     };
     this.handleChange = this.handleChange.bind(this);

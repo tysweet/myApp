@@ -35,7 +35,7 @@ class Fyyff extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Fudge you, you fudging duck."});
+      this.setState({message: "Forget you, you freaking duck."});
       this.setState({subtitle: subtitle});
     })
   }
@@ -54,7 +54,7 @@ class Fyyff extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "FUDGE YOU, YOU FUDGING DUCK!"});
+      this.setState({message: "FORGET YOU, YOU FREAKING DUCK!"});
       this.setState({subtitle: subtitle});
     })
   }

@@ -35,7 +35,7 @@ class Everyone extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Everyone can go and walk off."});
+      this.setState({message: "Everyone can go and fudge off."});
       this.setState({subtitle: subtitle});
     })
   }
@@ -54,7 +54,7 @@ class Everyone extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "EVERYONE CAN GO AND WALK OFF!"});
+      this.setState({message: "EVERYONE CAN GO AND FUDGE OFF!"});
       this.setState({subtitle: subtitle});
     })
   }

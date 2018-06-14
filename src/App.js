@@ -88,7 +88,7 @@ class App extends Component {
       <div>
         {/* <Alert /> */}
         <DrawerUndockedExample />
-        <header><h1>F*** Off - As A Service!</h1></header>
+        <header><h1>Fudge Off - As A Service!</h1></header>
         <Divider />
         <Asshole />
         <Divider />
@@ -130,7 +130,7 @@ class App extends Component {
         <Me /><Divider />
         <Mornin /><Divider />
         <No /><Divider />
-        <Nugget /><Divider />
+        {/* <Nugget /><Divider /> */}
         <Off /><Divider />
         <OffWith /><Divider />
         <Outside /><Divider />

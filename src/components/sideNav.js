@@ -72,7 +72,7 @@ export default class DrawerUndockedExample extends React.Component {
           <MenuItem onClick={this.handleClose} href="#me">Me</MenuItem>
           <MenuItem onClick={this.handleClose} href="#mornin">Mornin'</MenuItem>
           <MenuItem onClick={this.handleClose} href="#no">No</MenuItem>
-          <MenuItem onClick={this.handleClose} href="#nugget">Nugget</MenuItem>
+          {/* <MenuItem onClick={this.handleClose} href="#nugget">Nugget</MenuItem> */}
           <MenuItem onClick={this.handleClose} href="#off">Off</MenuItem>
           <MenuItem onClick={this.handleClose} href="#offwith">Off With</MenuItem>
           <MenuItem onClick={this.handleClose} href="#outside">Outside</MenuItem>
