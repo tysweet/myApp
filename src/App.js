@@ -40,7 +40,7 @@ import Maybe from './components/maybe.js';
 import Me from './components/me.js';
 import Mornin from './components/mornin.js';
 import No from './components/no.js';
-import Nugget from './components/nugget.js';
+// import Nugget from './components/nugget.js';
 import Off from './components/off.js';
 import OffWith from './components/offWith.js';
 import Outside from './components/outside.js';
@@ -53,7 +53,7 @@ import Question from './components/question.js';
 import Ridiculous from './components/ridiculous.js';
 import Rtfm from './components/rtfm.js';
 import Sake from './components/sake.js';
-import Shakespeare from './components/shakespeare.js';
+// import Shakespeare from './components/shakespeare.js';
 import Shit from './components/shit.js';
 import ShutUp from './components/shutup.js';
 import Single from './components/single.js';
@@ -143,7 +143,7 @@ class App extends Component {
         <Ridiculous /><Divider />
         <Rtfm /><Divider />
         <Sake /><Divider />
-        <Shakespeare /><Divider />
+        {/* <Shakespeare /><Divider /> */}
         <Shit /><Divider />
         <ShutUp /><Divider />
         <Single /><Divider />
