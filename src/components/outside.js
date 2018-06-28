@@ -277,7 +277,6 @@ class Outside extends Component {
         <div className="container">
           <h1>{this.state.message}</h1>
           <h3>{this.state.subtitle}</h3>
-        </div>
         <form>
           <label style={{marginLeft: 75}}>
             Change Name:
@@ -299,6 +298,7 @@ class Outside extends Component {
           <RaisedButton label="Русский" default={true} style={{marginLeft: 20, marginTop: 10}} onClick={this.handleRussian} value="Submit" />
           <RaisedButton label="Canadian" default={true} style={{marginLeft: 20, marginTop: 10}} onClick={this.handleCanadian} value="Submit" />
         </form><br />
+      </div>
         <a className="twitterButton" 
             href={`https://twitter.com/intent/tweet?text=${this.state.message}%20${this.state.subtitle}`} 
             target="_blank"><img src={tweet} alt={'Twitter Button'} style={{marginLeft: 45}}></img></a>

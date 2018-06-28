@@ -194,7 +194,7 @@ class KeepCalm extends Component {
     event.preventDefault();
     const newReact = this.state.reaction;
     const newFrom = this.state.from;
-    this.setState({name: newReact});
+    this.setState({reaction: newReact});
     this.setState({from: newFrom});
     this.componentDidMount();
   }
@@ -203,7 +203,7 @@ class KeepCalm extends Component {
     event.preventDefault();
     const newReact = this.state.reaction;
     const newFrom = this.state.from;
-    this.setState({name: newReact});
+    this.setState({reaction: newReact});
     this.setState({from: newFrom});
     this.componentWillShout();
   }
@@ -212,7 +212,7 @@ class KeepCalm extends Component {
     event.preventDefault();
     const newReact = this.state.reaction;
     const newFrom = this.state.from;
-    this.setState({name: newReact});
+    this.setState({reaction: newReact});
     this.setState({from: newFrom});
     this.inGerman();
   }
@@ -221,7 +221,7 @@ class KeepCalm extends Component {
     event.preventDefault();
     const newReact = this.state.reaction;
     const newFrom = this.state.from;
-    this.setState({name: newReact});
+    this.setState({reaction: newReact});
     this.setState({from: newFrom});
     this.inSpanish();
   }
@@ -230,7 +230,7 @@ class KeepCalm extends Component {
     event.preventDefault();
     const newReact = this.state.reaction;
     const newFrom = this.state.from;
-    this.setState({name: newReact});
+    this.setState({reaction: newReact});
     this.setState({from: newFrom});
     this.inFrench();
   }
@@ -239,7 +239,7 @@ class KeepCalm extends Component {
     event.preventDefault();
     const newReact = this.state.reaction;
     const newFrom = this.state.from;
-    this.setState({name: newReact});
+    this.setState({reaction: newReact});
     this.setState({from: newFrom});
     this.inKorean();
   }
@@ -248,7 +248,7 @@ class KeepCalm extends Component {
     event.preventDefault();
     const newReact = this.state.reaction;
     const newFrom = this.state.from;
-    this.setState({name: newReact});
+    this.setState({reaction: newReact});
     this.setState({from: newFrom});
     this.inRussian();
   }
@@ -257,7 +257,7 @@ class KeepCalm extends Component {
     event.preventDefault();
     const newReact = this.state.reaction;
     const newFrom = this.state.from;
-    this.setState({name: newReact});
+    this.setState({reaction: newReact});
     this.setState({from: newFrom});
     this.inCanadian();
   }
@@ -270,11 +270,10 @@ class KeepCalm extends Component {
         <div className="container">
           <h1>{this.state.message}</h1>
           <h3>{this.state.subtitle}</h3>
-        </div>
         <form>
           <label style={{marginLeft: 56}}>
             Change Reaction:
-            <input name="name" className="name" type="input" style={{margin: 5}}
+            <input name="reaction" className="reaction" type="input" style={{margin: 5}}
               onChange={this.handleChange} />
           </label>
           <br />
@@ -292,6 +291,7 @@ class KeepCalm extends Component {
           <RaisedButton label="Русский" default={true} style={{marginLeft: 20, marginTop: 10}} onClick={this.handleRussian} value="Submit" />
           <RaisedButton label="Canadian" default={true} style={{marginLeft: 20, marginTop: 10}} onClick={this.handleCanadian} value="Submit" />
         </form><br />
+      </div>
         <a className="twitterButton" 
             href={`https://twitter.com/intent/tweet?text=${this.state.message}%20${this.state.subtitle}`} 
             target="_blank"><img src={tweet} alt={'Twitter Button'} style={{marginLeft: 45}}></img></a>

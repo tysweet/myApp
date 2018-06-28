@@ -39,7 +39,7 @@ class DoSomething extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Mow the freaking lawn!"});
+      this.setState({message: doNow + " the freaking " + something +"!"});
       this.setState({subtitle: subtitle});
     })
   }
@@ -60,7 +60,7 @@ class DoSomething extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "MOW THE FREAKING LAWN!"});
+      this.setState({message: doNow.toUpperCase() + " THE FREAKING " + something.toUpperCase() + "!"});
       this.setState({subtitle: subtitle});
     })
   }
@@ -204,8 +204,8 @@ class DoSomething extends Component {
     const newDo = this.state.do;
     const newSomething = this.state.something;
     const newFrom = this.state.from;
-    this.setState({name: newDo});
-    this.setState({name: newSomething});
+    this.setState({do: newDo});
+    this.setState({something: newSomething});
     this.setState({from: newFrom});
     this.componentDidMount();
   }
@@ -215,8 +215,8 @@ class DoSomething extends Component {
     const newDo = this.state.do;
     const newSomething = this.state.something;
     const newFrom = this.state.from;
-    this.setState({name: newDo});
-    this.setState({name: newSomething});
+    this.setState({do: newDo});
+    this.setState({something: newSomething});
     this.setState({from: newFrom});
     this.componentWillShout();
   }
@@ -226,8 +226,8 @@ class DoSomething extends Component {
     const newDo = this.state.do;
     const newSomething = this.state.something;
     const newFrom = this.state.from;
-    this.setState({name: newDo});
-    this.setState({name: newSomething});
+    this.setState({do: newDo});
+    this.setState({something: newSomething});
     this.setState({from: newFrom});
     this.inGerman();
   }
@@ -237,8 +237,8 @@ class DoSomething extends Component {
     const newDo = this.state.do;
     const newSomething = this.state.something;
     const newFrom = this.state.from;
-    this.setState({name: newDo});
-    this.setState({name: newSomething});
+    this.setState({do: newDo});
+    this.setState({something: newSomething});
     this.setState({from: newFrom});
     this.inSpanish();
   }
@@ -248,8 +248,8 @@ class DoSomething extends Component {
     const newDo = this.state.do;
     const newSomething = this.state.something;
     const newFrom = this.state.from;
-    this.setState({name: newDo});
-    this.setState({name: newSomething});
+    this.setState({do: newDo});
+    this.setState({something: newSomething});
     this.setState({from: newFrom});
     this.inFrench();
   }
@@ -259,8 +259,8 @@ class DoSomething extends Component {
     const newDo = this.state.do;
     const newSomething = this.state.something;
     const newFrom = this.state.from;
-    this.setState({name: newDo});
-    this.setState({name: newSomething});
+    this.setState({do: newDo});
+    this.setState({something: newSomething});
     this.setState({from: newFrom});
     this.inKorean();
   }
@@ -270,8 +270,8 @@ class DoSomething extends Component {
     const newDo = this.state.do;
     const newSomething = this.state.something;
     const newFrom = this.state.from;
-    this.setState({name: newDo});
-    this.setState({name: newSomething});
+    this.setState({do: newDo});
+    this.setState({something: newSomething});
     this.setState({from: newFrom});
     this.inRussian();
   }
@@ -281,8 +281,8 @@ class DoSomething extends Component {
     const newDo = this.state.do;
     const newSomething = this.state.something;
     const newFrom = this.state.from;
-    this.setState({name: newDo});
-    this.setState({name: newSomething});
+    this.setState({do: newDo});
+    this.setState({something: newSomething});
     this.setState({from: newFrom});
     this.inCanadian();
   }
@@ -296,14 +296,13 @@ class DoSomething extends Component {
           <div className="container">
             <h1>{this.state.message}</h1>
             <h3>{this.state.subtitle}</h3>
-          </div>
           <form>
-            <label style={{marginLeft: 148}}>
+            <label style={{marginLeft: 149}}>
               Change Do:
-              <input name="name" className="name" type="input" style={{margin: 5}}
+              <input name="do" className="do" type="input" style={{margin: 5}}
                 onChange={this.handleChange} />
             </label><br />
-            <label style={{marginLeft: 92}}>
+            <label style={{marginLeft: 102}}>
               Change Something:
               <input name="something" className="something" type="input" style={{margin: 5}}
                 onChange={this.handleChange} />
@@ -322,6 +321,7 @@ class DoSomething extends Component {
             <RaisedButton label="Русский" default={true} style={{marginLeft: 20, marginTop: 10}} onClick={this.handleRussian} value="Submit" />
             <RaisedButton label="Canadian" default={true} style={{marginLeft: 20, marginTop: 10}} onClick={this.handleCanadian} value="Submit" />
           </form><br />
+        </div>
           <a className="twitterButton" 
             href={`https://twitter.com/intent/tweet?text=${this.state.message}%20${this.state.subtitle}`} 
             target="_blank"><img src={tweet} alt={'Twitter Button'} style={{marginLeft: 45}}></img></a>

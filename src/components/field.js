@@ -39,7 +39,7 @@ class Field extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "And " + name + " said unto " + from + ", 'Verily, cast thine eyes upon the field in which I grow my cares', and " + from + " gave witness unto the field, and saw that it was barren."});
+      this.setState({message: "And " + name + " said unto " + from + ", 'Verily, cast thine eyes upon the field in which I grow my figs', and " + from + " gave witness unto the field, and saw that it was barren."});
       this.setState({subtitle: subtitle});
     })
   }
@@ -60,7 +60,7 @@ class Field extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "AND " + name.toUpperCase() + " SAID UNTO " + from.toUpperCase() + ", 'VERILY, CAST THINE EYES UPON THE FIELD IN WHICH I GROW MY CARES', AND " + from.toUpperCase() + " GAVE WITNESS UNTO THE FIELD, AND SAW THAT IT WAS BARREN!"});
+      this.setState({message: "AND " + name.toUpperCase() + " SAID UNTO " + from.toUpperCase() + ", 'VERILY, CAST THINE EYES UPON THE FIELD IN WHICH I GROW MY FIGS', AND " + from.toUpperCase() + " GAVE WITNESS UNTO THE FIELD, AND SAW THAT IT WAS BARREN!"});
       this.setState({subtitle: subtitle});
     })
   }
@@ -186,7 +186,7 @@ class Field extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "And " + name + " said unto " + from + ", 'Verily, cast thine eyes upon the field in which I grow my cares', and " + from + " gave witness unto the field, and saw that it was, like, so full, eh?"});
+      this.setState({message: "And " + name + " said unto " + from + ", 'Verily, cast thine eyes upon the field in which I grow my figs', and " + from + " gave witness unto the field, and saw that it was, like, so full, eh?"});
       this.setState({subtitle: subtitle + ", eh"});
     })
   }
@@ -295,21 +295,20 @@ class Field extends Component {
         <div className="container">
           <h1>{this.state.message}</h1>
           <h3>{this.state.subtitle}</h3>
-        </div>
         <form>
-          <label style={{marginLeft: 78}}>
+          <label style={{marginLeft: 132}}>
             Change Name:
             <input name="name" className="name" type="input" style={{margin: 5}}
               onChange={this.handleChange} />
           </label><br />
-          <label style={{marginLeft: 85}}>
+          <label style={{marginLeft: 132}}>
             Change From:
-            <input name="something" className="something" type="input" style={{margin: 5}}
+            <input name="from" className="from" type="input" style={{margin: 5}}
               onChange={this.handleChange} />
           </label><br />
-          <label style={{marginLeft: 48}}>
+          <label style={{marginLeft: 112}}>
             Change Reference:
-            <input name="from" className="from" type="input" style={{margin: 5}}
+            <input name="reference" className="reference" type="input" style={{margin: 5}}
               onChange={this.handleChange} />
           </label><br />
           <RaisedButton label="Submit" default={true} style={{marginLeft: 150, marginTop: 10}} onClick={this.handleSubmit} value="Submit" />
@@ -321,6 +320,7 @@ class Field extends Component {
           <RaisedButton label="Русский" default={true} style={{marginLeft: 20, marginTop: 10}} onClick={this.handleRussian} value="Submit" />
           <RaisedButton label="Canadian" default={true} style={{marginLeft: 20, marginTop: 10}} onClick={this.handleCanadian} value="Submit" />
         </form><br />
+      </div>
         <a className="twitterButton" 
           href={`https://twitter.com/intent/tweet?text=${this.state.message}%20${this.state.subtitle}`} 
           target="_blank"><img src={tweet} alt={'Twitter Button'} style={{marginLeft: 45}}></img></a>

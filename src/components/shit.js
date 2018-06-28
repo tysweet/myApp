@@ -242,7 +242,7 @@ class Shit extends Component {
   render() {
     return (
       <div style={{marginTop: 20}}>
-        <a id="shit"></a>
+        <a id="stuff"></a>
         <div className="container">
           <h1>{this.state.message}</h1>
           <h3>{this.state.subtitle}</h3>

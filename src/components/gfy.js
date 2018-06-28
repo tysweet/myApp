@@ -270,15 +270,14 @@ class Gfy extends Component {
           <div className="container">
           <h1>{this.state.message}</h1>
           <h3>{this.state.subtitle}</h3>
-          </div>
           <form>
-          <label style={{marginLeft: 75}}>
+          <label style={{marginLeft: 92}}>
             Change Name:
             <input name="name" className="name" type="input" style={{margin: 5}}
               onChange={this.handleChange} />
           </label>
           <br />
-          <label style={{marginLeft: 82}}>
+          <label style={{marginLeft: 92}}>
             Change From:
             <input name="from" className="from" type="input" style={{margin: 5}}
               onChange={this.handleChange} />
@@ -292,6 +291,7 @@ class Gfy extends Component {
           <RaisedButton label="Русский" default={true} style={{marginLeft: 20, marginTop: 10}} onClick={this.handleRussian} value="Submit" />
           <RaisedButton label="Canadian" default={true} style={{marginLeft: 20, marginTop: 10}} onClick={this.handleCanadian} value="Submit" />
         </form><br />
+      </div>
       <a className="twitterButton" 
           href={`https://twitter.com/intent/tweet?text=${this.state.message}%20${this.state.subtitle}`} 
           target="_blank"><img src={tweet} alt={'Twitter Button'} style={{marginLeft: 45}}></img></a>

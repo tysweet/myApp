@@ -32,7 +32,7 @@ export default class DrawerUndockedExample extends React.Component {
           width={200}
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})}>
-          <MenuItem onClick={this.handleClose} href="#asshole">Icehole</MenuItem>
+          <MenuItem onClick={this.handleClose} href="#icehole">Icehole</MenuItem>
           <MenuItem onClick={this.handleClose} href="#awesome">Awesome</MenuItem>
           <MenuItem onClick={this.handleClose} href="#back">Back</MenuItem>
           <MenuItem onClick={this.handleClose} href="#bag">Bag</MenuItem>
@@ -49,7 +49,7 @@ export default class DrawerUndockedExample extends React.Component {
           <MenuItem onClick={this.handleClose} href="#dosomething">Do Something</MenuItem>
           <MenuItem onClick={this.handleClose} href="#everyone">Everyone</MenuItem>
           <MenuItem onClick={this.handleClose} href="#everything">Everything</MenuItem>
-          <MenuItem onClick={this.handleClose} href="#family">Family</MenuItem>
+          {/* <MenuItem onClick={this.handleClose} href="#family">Family</MenuItem> */}
           <MenuItem onClick={this.handleClose} href="#fascinating">Fascinating</MenuItem>
           <MenuItem onClick={this.handleClose} href="#field">Field</MenuItem>
           <MenuItem onClick={this.handleClose} href="#flying">Flying</MenuItem>
@@ -86,7 +86,7 @@ export default class DrawerUndockedExample extends React.Component {
           <MenuItem onClick={this.handleClose} href="#rtfm">RTFM</MenuItem>
           <MenuItem onClick={this.handleClose} href="#sake">Sake</MenuItem>
           {/* <MenuItem onClick={this.handleClose} href="#shakespeare">Shakespeare</MenuItem> */}
-          <MenuItem onClick={this.handleClose} href="#shit">F.T.S.</MenuItem>
+          <MenuItem onClick={this.handleClose} href="#stuff">Stuff</MenuItem>
           <MenuItem onClick={this.handleClose} href="#shutup">Shut Up</MenuItem>
           <MenuItem onClick={this.handleClose} href="#single">Single</MenuItem>
           <MenuItem onClick={this.handleClose} href="#thanks">Thanks</MenuItem>

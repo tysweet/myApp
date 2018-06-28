@@ -61,7 +61,9 @@ dragHandle {
 .menuButton {
   display: inline-flex;
   text-align: center;
+  font-family: 'Great Vibes', cursive;
   font-weight: bold;
+  font-size: 23px;
   margin: 20px;
   padding: 10px;
   border: 1px solid black;
@@ -76,6 +78,16 @@ dragHandle {
 
 .container {
   margin-left: 40px;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 28px;
+}
+
+.container h1 {
+  font-size: 53px;
+}
+
+.container h3 {
+  font-size: 35px;
 }
 
 .twitterButton img {

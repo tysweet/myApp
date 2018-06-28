@@ -246,7 +246,7 @@ class Flying extends Component {
           <h1>{this.state.message}</h1>
           <h3>{this.state.subtitle}</h3>
           <form>
-            <label style={{marginLeft: 42}}>
+            <label style={{marginLeft: 92}}>
               Change From:
               <input name="from" className="from" type="input" style={{margin: 5}}
                 onChange={this.handleChange} />
