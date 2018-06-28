@@ -271,25 +271,25 @@ class Keep extends Component {
           <h1>{this.state.message}</h1>
           <h3>{this.state.subtitle}</h3>
         <form>
-          <label style={{marginLeft: 75}}>
+          <label style={{marginLeft: 82}}>
             Change Name:
             <input name="name" className="name" type="input" style={{margin: 5}}
               onChange={this.handleChange} />
           </label>
           <br />
-          <label style={{marginLeft: 82}}>
+          <label style={{marginLeft: 92}}>
             Change From:
             <input name="from" className="from" type="input" style={{margin: 5}}
               onChange={this.handleChange} />
           </label><br />
-          <RaisedButton label="Submit" default={true} style={{marginLeft: 150, marginTop: 10}} onClick={this.handleSubmit} value="Submit" />
-          <RaisedButton label="Shout!!" secondary={true} style={{marginLeft: 20, marginTop: 10}} onClick={this.handleShout} value="Submit" />
-          <RaisedButton label="Español" default={true} style={{marginLeft: 20, marginTop: 10}} onClick={this.handleSpanish} value="Submit" />
-          <RaisedButton label="Français" default={true} style={{marginLeft: 20, marginTop: 10}} onClick={this.handleFrench} value="Submit" />
-          <RaisedButton label="Deutsch" default={true} style={{marginLeft: 20, marginTop: 10}} onClick={this.handleGerman} value="Submit" />
-          <RaisedButton label="한국어" default={true} style={{marginLeft: 20, marginTop: 10}} onClick={this.handleKorean} value="Submit" />
-          <RaisedButton label="Русский" default={true} style={{marginLeft: 20, marginTop: 10}} onClick={this.handleRussian} value="Submit" />
-          <RaisedButton label="Canadian" default={true} style={{marginLeft: 20, marginTop: 10}} onClick={this.handleCanadian} value="Submit" />
+          <RaisedButton label="Submit" default={true} style={{marginLeft: 110, marginTop: 20}} onClick={this.handleSubmit} value="Submit" />
+          <RaisedButton label="Shout!!" secondary={true} style={{marginLeft: 20}} onClick={this.handleShout} value="Submit" />
+          <RaisedButton label="Español" default={true} style={{marginLeft: 20}} onClick={this.handleSpanish} value="Submit" />
+          <RaisedButton label="Français" default={true} style={{marginLeft: 20}} onClick={this.handleFrench} value="Submit" />
+          <RaisedButton label="Deutsch" default={true} style={{marginLeft: 20}} onClick={this.handleGerman} value="Submit" />
+          <RaisedButton label="한국어" default={true} style={{marginLeft: 20}} onClick={this.handleKorean} value="Submit" />
+          <RaisedButton label="Русский" default={true} style={{marginLeft: 20}} onClick={this.handleRussian} value="Submit" />
+          <RaisedButton label="Canadian" default={true} style={{marginLeft: 20}} onClick={this.handleCanadian} value="Submit" />
         </form><br />
       </div>
         <a className="twitterButton" 
