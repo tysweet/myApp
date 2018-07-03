@@ -315,11 +315,11 @@ class Asshole extends Component {
             <input type="submit" id="russian" className="submit" name="submit" alt="In Russian" value="Russian" onClick={this.handleRussian} />
             <input type="submit" id="canada" className="submit" name="submit" alt="In Canadian" value="Canadian" onClick={this.handleCanadian} />
           </form><br/>
-          <label style={{marginLeft: 92}}>Send as SMS:</label>
-          <input type="tel" name="number" style={{marginBottom: 30, marginLeft: 10, height: 20}} placeholder="15551234567" required />
-          <button id="text" className="text" type="button" onClick={this.handleSMS}>Send</button><br/>
           <div className="social">
-            <button id="clipboard" className="text" type="button" style={{marginLeft: 30}} onclick={this.clipboard()}>Copy text</button>
+            <label className="textLabel" style={{marginLeft: 92}}>Send as SMS:</label>
+            <input className="sms" type="tel" name="number" placeholder="15551234567" required />
+            <button id="text" className="text" type="button" onClick={this.handleSMS}>Send</button><br/>
+            <button id="clipboard" className="text" type="button" onclick={this.clipboard()}>Copy Text</button>
             <a className="twitterButton"
             href={`https://twitter.com/intent/tweet?text=${this.state.message}%20${this.state.subtitle}`}
             target="_blank"><img src={tweet} alt={'Twitter Button'}></img></a> 

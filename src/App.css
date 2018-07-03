@@ -88,9 +88,11 @@ dragHandle {
 
 .container h3 {
   font-size: 35px;
+  margin-bottom: 10px;
 }
 
 .submit {
+  margin-bottom: 10px;
   margin-left: 30px;
   border-width: 2px;
   height: 40px;
@@ -161,32 +163,70 @@ dragHandle {
   color: rgba(255,255,255,0);
 }
 
-.text {
-border-width: 1px;
-height: 25px;
-margin-left: 10px;
-cursor: pointer;
-}
-
-#text {
-  background-color: whitesmoke;
-  width: 60px;
-}
-
 div.social {
   position: relative;
+  margin-bottom: 10px;
 }
 
-#clipboard {
-  margin-right: 350px;
-  width: 80px;
-  background-color: lightgoldenrodyellow;
+.social label {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.social input {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.social button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .social a {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+label.textLabel {
+  height: 20px;
+  margin-right: 690px;
+  margin-bottom: 14px;
+}
+
+input.sms {
+  height: 20px;
+  margin-right: 550px;
+  margin-bottom: 8px;
+}
+
+.text {
+  border-width: 1px;
+  height: 25px;
+  margin-right: 480px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+#text {
+  background-color: silver;;
+  width: 60px;
+}
+
+#clipboard {
+  margin-right: 350px;
+  margin-bottom: 7px;
+  height: 30px;
+  width: 85px;
+  border-radius: 5px;
+  background-color: orangered;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
 }
 
 .twitterButton img {
