@@ -300,34 +300,29 @@ class Awesome extends Component {
           <h1>{this.state.message}</h1>
           <h3>{this.state.subtitle}</h3>
           <form>
-            <label style={{marginLeft: 92}}>
-              Change From:
-              <input name="from" className="from" type="input" style={{margin: 5}}
-              placeholder={this.state.from} onChange={this.handleChange} />
+            <label>Change From:
+              <input name="from" className="from" type="input" style={{margin: 10, height: 20}}
+                placeholder={this.state.from} onChange={this.handleChange} />
             </label><br />
-            <RaisedButton label="Submit" default={true} style={{marginLeft: 110, marginTop: 20}} onClick={this.handleSubmit} value="Submit" />
-            <RaisedButton label="Shout!!" secondary={true} style={{marginLeft: 20}} onClick={this.handleShout} value="Submit" />
-            <RaisedButton label="Español" default={true} style={{marginLeft: 20}} onClick={this.handleSpanish} value="Submit" />
-            <RaisedButton label="Français" default={true} style={{marginLeft: 20}} onClick={this.handleFrench} value="Submit" />
-            <RaisedButton label="Deutsch" default={true} style={{marginLeft: 20}} onClick={this.handleGerman} value="Submit" />
-            <RaisedButton label="한국어" default={true} style={{marginLeft: 20}} onClick={this.handleKorean} value="Submit" />
-            <RaisedButton label="Русский" default={true} style={{marginLeft: 20}} onClick={this.handleRussian} value="Submit" />
-            <RaisedButton label="Canadian" default={true} style={{marginLeft: 20}} onClick={this.handleCanadian} value="Submit" />
+            <button id="submit" className="submit" style={{marginLeft: 40, marginTop: 20}} onClick={this.handleSubmit}>Submit</button>
+            <button id="shout" className="submit" onClick={this.handleShout} >SHOUT!!</button>
+            <input type="submit" id="spanish" className="submit" name="submit" alt="In Spanish" value="Spanish" onClick={this.handleSpanish} />
+            <input type="submit" id="french" className="submit" name="submit" alt="In French" value="French" onClick={this.handleFrench} />
+            <input type="submit" id="german" className="submit" name="submit" alt="In German" value="German" onClick={this.handleGerman} />
+            <input type="submit" id="korean" className="submit" name="submit" alt="In Korean" value="Korean" onClick={this.handleKorean} />
+            <input type="submit" id="russian" className="submit" name="submit" alt="In Russian" value="Russian" onClick={this.handleRussian} />
+            <input type="submit" id="canada" className="submit" name="submit" alt="In Canadian" value="Canadian" onClick={this.handleCanadian} />
           </form><br/>
-          <label style={{marginLeft: 92}}>Send as SMS:</label>
-            <input type="tel" name="number" style={{marginBottom: 30, marginLeft: 10, height: 20}} placeholder="15551234567" required />
-            <button id="text" type="button" onClick={this.handleSMS} style={{marginLeft: 10}}>Send</button>
-            <button type="button" id="text" style={{marginLeft: 20}} onclick={this.clipboard()}>Copy text</button><br/>
           <div className="social">
-            <a className="twitterButton" style={{/*marginLeft: 110*/}}
-              href={`https://twitter.com/intent/tweet?text=${this.state.message}%20${this.state.subtitle}`}
-              target="_blank"><img src={tweet} alt={'Twitter Button'}></img></a> 
-            <a className="facebookButton" style={{/*marginLeft: 20*/}}
-              href={`https://www.facebook.com/`}
-              target="_blank"><img src={FBshare} alt={'Facebook Button'}></img></a> 
-            <a className="slackButton" style={{/*marginLeft: 20*/}}
-              href={`https://www.slack.com/`}
-              target="_blank"><img src={slack} alt={'Slack Button'}></img></a>
+            <label className="textLabel" style={{marginLeft: 92}}>Send as SMS:</label>
+            <input className="sms" type="tel" name="number" placeholder="15551234567" required />
+            <button id="text" className="text" type="button" onClick={this.handleSMS}>Send</button><br/>
+            <button id="clipboard" className="text" type="button" onclick={this.clipboard()}>Copy Text</button>
+            <a className="twitterButton"
+            href={`https://twitter.com/intent/tweet?text=${this.state.message}%20${this.state.subtitle}`}
+            target="_blank"><img src={tweet} alt={'Twitter Button'}></img></a> 
+            <a className="facebookButton" href={`https://www.facebook.com/`} target="_blank"><img src={FBshare} alt={'Facebook Button'}></img></a> 
+            <a className="slackButton" href={`https://www.slack.com/`} target="_blank"><img src={slack} alt={'Slack Button'}></img></a>
           </div>
         </div>
       </div>

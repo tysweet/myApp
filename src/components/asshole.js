@@ -302,11 +302,11 @@ class Asshole extends Component {
           <h1>{this.state.message}</h1>
           <h3>{this.state.subtitle}</h3>
           <form>
-            <label style={{marginLeft: 92}}>Change From:
+            <label>Change From:
               <input name="from" className="from" type="input" style={{margin: 10, height: 20}}
                 placeholder={this.state.from} onChange={this.handleChange} />
             </label><br />
-            <button id="submit" className="submit" style={{marginLeft: 110, marginTop: 20}} onClick={this.handleSubmit}>Submit</button>
+            <button id="submit" className="submit" style={{marginLeft: 40, marginTop: 20}} onClick={this.handleSubmit}>Submit</button>
             <button id="shout" className="submit" onClick={this.handleShout} >SHOUT!!</button>
             <input type="submit" id="spanish" className="submit" name="submit" alt="In Spanish" value="Spanish" onClick={this.handleSpanish} />
             <input type="submit" id="french" className="submit" name="submit" alt="In French" value="French" onClick={this.handleFrench} />
