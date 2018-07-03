@@ -18,7 +18,7 @@ export default class DrawerUndockedExample extends React.Component {
   render() {
     return (
       <div>
-        <div className='menuButton' onClick={this.handleToggle}>
+        <div className='menuButton' style={{cursor: "pointer"}} onClick={this.handleToggle}>
           The Freaking Menu
           {/* <img className = 'middleFinger' src={ require(`./img/1f595.png`) }  
              onClick={this.handleToggle} />

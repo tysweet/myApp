@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
-import SendSMS from '../send_sms.js';
 import '../App.css';
-import tweet from '../img/tweet.png';
+import tweet from '../img/tweet.jpg';
+import FBshare from '../img/FBshare.jpg';
+import slack from '../img/slack.png';
 
 class Awesome extends Component {
   constructor(props) {
@@ -10,7 +11,10 @@ class Awesome extends Component {
     this.state = {
       value: '',
       from: 'Mom',
+      message: '',
+      subtitle: '',
     };
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleShout = this.handleShout.bind(this);
@@ -20,6 +24,7 @@ class Awesome extends Component {
     this.handleKorean = this.handleKorean.bind(this);
     this.handleRussian = this.handleRussian.bind(this);
     this.handleCanadian = this.handleCanadian.bind(this);
+    this.handleSMS = this.handleSMS.bind(this);
   }
 
   componentDidMount() {
@@ -174,6 +179,43 @@ class Awesome extends Component {
     })
   }
 
+  sendSMS() {
+    var numberField = document.querySelector('input[name=number]');
+    var number = numberField.value.replace(/\D/g,''); // Remove all non-numeric chars
+    var text = this.state.message + this.state.subtitle;
+    fetch('/', {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({number: number, text: text})
+    })
+    .then(function(res){ console.log(res) })
+    .catch(function(error){ console.log(error)});
+  }
+
+  clipboard = str => {
+    const el = document.createElement('textarea');
+    const message = this.state.message;
+    const subtitle = this.state.subtitle;
+    el.value = message + " " + subtitle;
+    el.setAttribute('readonly', '');
+    el.style.position = 'absolute';                 
+    el.style.left = '-9999px';
+    document.body.appendChild(el);
+    const selected =            
+      document.getSelection().rangeCount > 0 
+        ? document.getSelection().getRangeAt(0)
+        : false;
+    el.select(); 
+    document.execCommand('copy');
+    document.body.removeChild(el); 
+    if (selected) { 
+      document.getSelection().removeAllRanges(); 
+      document.getSelection().addRange(selected);
+    }
+  };
+
   handleChange(event) {
     const target = event.target;
     const value = target.type === 'input' ? target.checked : target.value;
@@ -239,6 +281,16 @@ class Awesome extends Component {
     this.inCanadian();
   }
 
+  handleSMS(event) {
+    event.preventDefault();
+    var numberField = document.querySelector('input[name=number]');
+    var button = document.querySelector('button[type=button]');
+    numberField.addEventListener('keyup', function(e) {
+      if ((e.keyCode || e.charCode) === 13) this.sendSMS();
+    }, false);
+    button.addEventListener('click', this.sendSMS(), false);
+  }
+
 
   render() {
     return (
@@ -251,7 +303,7 @@ class Awesome extends Component {
             <label style={{marginLeft: 92}}>
               Change From:
               <input name="from" className="from" type="input" style={{margin: 5}}
-                onChange={this.handleChange} />
+              placeholder={this.state.from} onChange={this.handleChange} />
             </label><br />
             <RaisedButton label="Submit" default={true} style={{marginLeft: 110, marginTop: 20}} onClick={this.handleSubmit} value="Submit" />
             <RaisedButton label="Shout!!" secondary={true} style={{marginLeft: 20}} onClick={this.handleShout} value="Submit" />
@@ -262,9 +314,21 @@ class Awesome extends Component {
             <RaisedButton label="Русский" default={true} style={{marginLeft: 20}} onClick={this.handleRussian} value="Submit" />
             <RaisedButton label="Canadian" default={true} style={{marginLeft: 20}} onClick={this.handleCanadian} value="Submit" />
           </form><br/>
-            <a className="twitterButton" 
-            href={`https://twitter.com/intent/tweet?text=${this.state.message}%20${this.state.subtitle}`} 
-            target="_blank"><img src={tweet} alt={'Twitter Button'}></img></a>
+          <label style={{marginLeft: 92}}>Send as SMS:</label>
+            <input type="tel" name="number" style={{marginBottom: 30, marginLeft: 10, height: 20}} placeholder="15551234567" required />
+            <button id="text" type="button" onClick={this.handleSMS} style={{marginLeft: 10}}>Send</button>
+            <button type="button" id="text" style={{marginLeft: 20}} onclick={this.clipboard()}>Copy text</button><br/>
+          <div className="social">
+            <a className="twitterButton" style={{/*marginLeft: 110*/}}
+              href={`https://twitter.com/intent/tweet?text=${this.state.message}%20${this.state.subtitle}`}
+              target="_blank"><img src={tweet} alt={'Twitter Button'}></img></a> 
+            <a className="facebookButton" style={{/*marginLeft: 20*/}}
+              href={`https://www.facebook.com/`}
+              target="_blank"><img src={FBshare} alt={'Facebook Button'}></img></a> 
+            <a className="slackButton" style={{/*marginLeft: 20*/}}
+              href={`https://www.slack.com/`}
+              target="_blank"><img src={slack} alt={'Slack Button'}></img></a>
+          </div>
         </div>
       </div>
     );

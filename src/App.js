@@ -71,7 +71,6 @@ import Yoda from './components/yoda.js';
 import You from './components/you.js';
 import Zayn from './components/zayn.js';
 import Zero from './components/zero.js';
-import SendSMS from './send_sms.js';
 import './App.css';
 import DrawerUndockedExample from './components/sideNav.js';
 
