@@ -348,7 +348,7 @@ class DoSomething extends Component {
             <h1>{this.state.message}</h1>
             <h3>{this.state.subtitle}</h3>
           <form>
-            <label>Change Do:
+            <label style={{marginLeft: 68}}>Change Do:
               <input name="do" className="do" type="input" style={{marginLeft: 10, height: 20}}
                 placeholder={this.state.do} onChange={this.handleChange} />
             </label><br />
@@ -356,7 +356,7 @@ class DoSomething extends Component {
               <input name="something" className="something" type="input" style={{marginLeft: 10, height: 20}}
                 placeholder={this.state.something} onChange={this.handleChange} />
             </label><br />
-            <label>Change From:
+            <label style={{marginLeft: 48}}>Change From:
               <input name="from" className="from" type="input" style={{marginLeft: 10, height: 20}}
                 placeholder={this.state.from} onChange={this.handleChange} />
             </label><br />

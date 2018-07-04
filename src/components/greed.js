@@ -10,7 +10,7 @@ class Greed extends Component {
     this.state = {
       value: '',
       noun: 'Beer',
-      from: 'Mikey D',
+      from: 'Gordon',
       message: '',
       subtitle: '',
     };

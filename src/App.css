@@ -96,6 +96,10 @@ dragHandle {
   margin-bottom: 30px;
 }
 
+input {
+  font-size: 14px;
+}
+
 .submit {
   margin-bottom: 10px;
   margin-left: 30px;
@@ -109,7 +113,7 @@ dragHandle {
 }
 
 .submit:hover {
-  opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 #shout {
@@ -232,7 +236,7 @@ div.social {
 
 label.textLabel {
   height: 20px;
-  margin-right: 700px;
+  margin-right: 720px;
   margin-bottom: 14px;
 }
 
@@ -255,7 +259,7 @@ input.sms {
 }
 
 .text:hover {
-  opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 #clipboard {
@@ -322,5 +326,5 @@ input.sms {
 }
 
 #myBtn:hover {
-  opacity: 0.5;
+  opacity: 0.75;
 }

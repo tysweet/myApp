@@ -348,11 +348,11 @@ class Field extends Component {
             <h1>{this.state.message}</h1>
             <h3>{this.state.subtitle}</h3>
           <form>
-            <label>Change Name:
+            <label style={{marginLeft: 41}}>Change Name:
               <input name="name" className="name" type="input" style={{marginLeft: 10, height: 20}}
                 placeholder={this.state.name} onChange={this.handleChange} />
             </label><br />
-            <label>Change From:
+            <label style={{marginLeft: 51}}>Change From:
               <input name="from" className="from" type="input" style={{marginLeft: 10, height: 20}}
                 placeholder={this.state.from} onChange={this.handleChange} />
             </label><br />

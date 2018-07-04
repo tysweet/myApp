@@ -323,7 +323,7 @@ class CanIUse extends Component {
           <h1>{this.state.message}</h1>
           <h3>{this.state.subtitle}</h3>
           <form>
-            <label>Change Tool:
+          <label style={{marginLeft: 6}}>Change Tool:
               <input name="tool" className="tool" type="input" style={{marginLeft: 10, height: 20}}
                 placeholder={this.state.tool} onChange={this.handleChange} />
             </label><br />

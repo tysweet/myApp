@@ -327,7 +327,7 @@ class Pulp extends Component {
               <input name="language" className="language" type="input" style={{marginLeft: 10, height: 20}}
                 placeholder={this.state.language} onChange={this.handleChange} />
             </label><br />
-            <label>Change From:
+            <label style={{marginLeft: 45}}>Change From:
               <input name="from" className="from" type="input" style={{margin: 10, height: 20}}
                 placeholder={this.state.from} onChange={this.handleChange} />
             </label><br />

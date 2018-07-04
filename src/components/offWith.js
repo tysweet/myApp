@@ -327,7 +327,7 @@ class OffWith extends Component {
               <input name="behavior" className="behavior" type="input" style={{marginLeft: 10, height: 20}}
                 placeholder={this.state.behavior} onChange={this.handleChange} />
             </label><br />
-            <label>Change From:
+            <label style={{marginLeft: 38}}>Change From:
               <input name="from" className="from" type="input" style={{margin: 10, height: 20}}
                 placeholder={this.state.from} onChange={this.handleChange} />
             </label><br />

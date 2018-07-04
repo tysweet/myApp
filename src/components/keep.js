@@ -327,7 +327,7 @@ class Keep extends Component {
             <input name="name" className="name" type="input" style={{marginLeft: 10, height: 20}}
               placeholder={this.state.name} onChange={this.handleChange} />
           </label><br />
-          <label>Change From:
+          <label style={{marginLeft: 10}}>Change From:
             <input name="from" className="from" type="input" style={{margin: 10, height: 20}}
               placeholder={this.state.from} onChange={this.handleChange} />
           </label><br />
