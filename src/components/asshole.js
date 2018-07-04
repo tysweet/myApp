@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
 import '../App.css';
 import tweet from '../img/tweet.jpg';
 import FBshare from '../img/FBshare.jpg';
@@ -44,7 +43,6 @@ class Asshole extends Component {
       this.setState({message: "Fudge off, icehole."});
       this.setState({subtitle: subtitle});
     })
-     
   }
 
   componentWillShout() {
@@ -225,14 +223,12 @@ class Asshole extends Component {
     this.setState({[name]: value});
   }
 
-
   handleSubmit(event) {
     event.preventDefault();
     const newFrom = this.state.from;
     this.setState({from: newFrom});
     this.componentDidMount();
   }
-
 
   handleShout(event) {
     event.preventDefault();
@@ -331,4 +327,5 @@ class Asshole extends Component {
     );
   }
 }
+
 export default Asshole;

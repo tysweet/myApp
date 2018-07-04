@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
 import '../App.css';
 import tweet from '../img/tweet.png';
+import FBshare from '../img/FBshare.jpg';
+import slack from '../img/slack.png';
 
 class Diabetes extends Component {
   constructor(props) {
@@ -9,7 +10,10 @@ class Diabetes extends Component {
     this.state = {
       value: '',
       from: 'Your Grandpa',
+      message: '',
+      subtitle: '',
     };
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleShout = this.handleShout.bind(this);
@@ -19,6 +23,7 @@ class Diabetes extends Component {
     this.handleKorean = this.handleKorean.bind(this);
     this.handleRussian = this.handleRussian.bind(this);
     this.handleCanadian = this.handleCanadian.bind(this);
+    this.handleSMS = this.handleSMS.bind(this);
   }
 
   componentDidMount() {
@@ -173,6 +178,44 @@ class Diabetes extends Component {
     })
   }
 
+  sendSMS() {
+    const numberField = document.querySelector('input[name=number]');
+    const number = numberField.value.replace(/\D/g,''); // Remove all non-numeric chars
+    const text = this.state.message + this.state.subtitle;
+    fetch('/', {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({number: number, text: text})
+    })
+    .then(function(res){ console.log(res) })
+    .catch(function(error){ console.log(error)});
+  }
+
+   clipboard = str => {
+    const el = document.createElement('textarea');
+    const message = this.state.message;
+    const subtitle = this.state.subtitle;
+    el.value = message + " " + subtitle;
+    el.setAttribute('readonly', '');
+    el.style.position = 'absolute';                 
+    el.style.left = '-9999px';
+    document.body.appendChild(el);
+    const selected =            
+      document.getSelection().rangeCount > 0 
+        ? document.getSelection().getRangeAt(0)
+        : false;
+    el.select(); 
+    document.execCommand('copy');
+    document.body.removeChild(el); 
+    if (selected) { 
+      document.getSelection().removeAllRanges(); 
+      document.getSelection().addRange(selected);
+    }
+  };
+
+
   handleChange(event) {
     const target = event.target;
     const value = target.type === 'input' ? target.checked : target.value;
@@ -180,14 +223,12 @@ class Diabetes extends Component {
     this.setState({[name]: value});
   }
 
-
   handleSubmit(event) {
     event.preventDefault();
     const newFrom = this.state.from;
     this.setState({from: newFrom});
     this.componentDidMount();
   }
-
 
   handleShout(event) {
     event.preventDefault();
@@ -238,6 +279,16 @@ class Diabetes extends Component {
     this.inCanadian();
   }
 
+  handleSMS(event) {
+    event.preventDefault();
+    const numberField = document.querySelector('input[name=number]');
+    const button = document.querySelector('button[type=button]');
+    numberField.addEventListener('keyup', function(e) {
+      if ((e.keyCode || e.charCode) === 13) this.sendSMS();
+    }, false);
+    button.addEventListener('click', this.sendSMS(), false);
+  }
+
 
   render() {
     return (
@@ -247,26 +298,34 @@ class Diabetes extends Component {
         <h1>{this.state.message}</h1>
         <h3>{this.state.subtitle}</h3>
         <form>
-          <label style={{marginLeft: 92}}>
-            Change From:
-            <input name="from" className="from" type="input" style={{margin: 5}}
-              onChange={this.handleChange} />
-          </label><br />
-          <RaisedButton label="Submit" default={true} style={{marginLeft: 110, marginTop: 20}} onClick={this.handleSubmit} value="Submit" />
-          <RaisedButton label="Shout!!" secondary={true} style={{marginLeft: 20}} onClick={this.handleShout} value="Submit" />
-          <RaisedButton label="Español" default={true} style={{marginLeft: 20}} onClick={this.handleSpanish} value="Submit" />
-          <RaisedButton label="Français" default={true} style={{marginLeft: 20}} onClick={this.handleFrench} value="Submit" />
-          <RaisedButton label="Deutsch" default={true} style={{marginLeft: 20}} onClick={this.handleGerman} value="Submit" />
-          <RaisedButton label="한국어" default={true} style={{marginLeft: 20}} onClick={this.handleKorean} value="Submit" />
-          <RaisedButton label="Русский" default={true} style={{marginLeft: 20}} onClick={this.handleRussian} value="Submit" />
-          <RaisedButton label="Canadian" default={true} style={{marginLeft: 20}} onClick={this.handleCanadian} value="Submit" />
-        </form><br/>
-          <a className="twitterButton" 
-          href={`https://twitter.com/intent/tweet?text=${this.state.message}%20${this.state.subtitle}`} 
-          target="_blank"><img src={tweet} alt={'Twitter Button'}></img></a>
+            <label>Change From:
+              <input name="from" className="from" type="input" style={{margin: 10, height: 20}}
+                placeholder={this.state.from} onChange={this.handleChange} />
+            </label><br />
+            <button id="submit" className="submit" style={{marginLeft: 40, marginTop: 20}} onClick={this.handleSubmit}>Submit</button>
+            <button id="shout" className="submit" onClick={this.handleShout} >SHOUT!!</button>
+            <input type="submit" id="spanish" className="submit" name="submit" alt="In Spanish" value="Spanish" onClick={this.handleSpanish} />
+            <input type="submit" id="french" className="submit" name="submit" alt="In French" value="French" onClick={this.handleFrench} />
+            <input type="submit" id="german" className="submit" name="submit" alt="In German" value="German" onClick={this.handleGerman} />
+            <input type="submit" id="korean" className="submit" name="submit" alt="In Korean" value="Korean" onClick={this.handleKorean} />
+            <input type="submit" id="russian" className="submit" name="submit" alt="In Russian" value="Russian" onClick={this.handleRussian} />
+            <input type="submit" id="canada" className="submit" name="submit" alt="In Canadian" value="Canadian" onClick={this.handleCanadian} />
+          </form><br/>
+          <div className="social">
+            <label className="textLabel" style={{marginLeft: 92}}>Send as SMS:</label>
+            <input className="sms" type="tel" name="number" placeholder="15551234567" required />
+            <button id="text" className="text" type="button" onClick={this.handleSMS}>Send</button><br/>
+            <button id="clipboard" className="text" type="button" onclick={this.clipboard()}>Copy Text</button>
+            <a className="twitterButton"
+            href={`https://twitter.com/intent/tweet?text=${this.state.message}%20${this.state.subtitle}`}
+            target="_blank"><img src={tweet} alt={'Twitter Button'}></img></a> 
+            <a className="facebookButton" href={`https://www.facebook.com/`} target="_blank"><img src={FBshare} alt={'Facebook Button'}></img></a> 
+            <a className="slackButton" href={`https://www.slack.com/`} target="_blank"><img src={slack} alt={'Slack Button'}></img></a>
+          </div>
         </div>
       </div>
     );
   }
 }
+
 export default Diabetes;
