@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
-import tweet from '../img/tweet.png';
+import tweet from '../img/tweet.jpg';
 import FBshare from '../img/FBshare.jpg';
 import slack from '../img/slack.png';
 
