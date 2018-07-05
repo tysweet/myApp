@@ -8,8 +8,7 @@ const nexmo = new Nexmo({
   apiSecret: "5vUwNAPeHAPaSPad",
 }, {debug: true});
 
-app.set('views', __dirname + '../components/asshole')
-app.set('views', __dirname + '../components/awesome');
+app.set('views', __dirname + '../components');
 app.set('view engine', 'html');
 app.engine('html', ejs.renderFile);
 app.use(express.static(__dirname + '../src'));

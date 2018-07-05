@@ -1,7 +1,6 @@
 import React from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
-import RaisedButton from 'material-ui/RaisedButton';
 import '../App.css';
 
 export default class DrawerUndockedExample extends React.Component {
@@ -12,7 +11,6 @@ export default class DrawerUndockedExample extends React.Component {
   }
 
   handleToggle = () => this.setState({open: !this.state.open});
-
   handleClose = () => this.setState({open: false});
 
   render() {

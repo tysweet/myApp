@@ -4,7 +4,6 @@ header {
   font-size: 56px;
   height: 200px;
   text-align: center;
-  /* padding: 20px; */
 }
 
 root {
@@ -71,7 +70,7 @@ dragHandle {
 }
 
 .menuButton:hover {
-  opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .middleFinger:hover {
@@ -98,7 +97,12 @@ dragHandle {
 
 input {
   font-family: 'Reenie Beanie', cursive;
-  font-size: 20px;
+  font-size: 24px;
+  border: 1px solid black;
+}
+
+input:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .submit {
@@ -242,6 +246,7 @@ label.textLabel {
 }
 
 input.sms {
+  width: 145px;
   height: 20px;
   margin-right: 560px;
   margin-bottom: 8px;

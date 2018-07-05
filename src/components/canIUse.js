@@ -329,7 +329,7 @@ class CanIUse extends Component {
             </label><br />
             <label>Change From:
               <input name="from" className="from" type="input" style={{margin: 10, height: 20}}
-                placeholder={this.state.from} onChange={this.handleChange} />
+                placeholder={this.state.from} onBlur={this.handleChange} />
             </label><br />
             <button id="submit" className="submit" style={{marginLeft: 40, marginTop: 20}} onClick={this.handleSubmit}>Submit</button>
             <button id="shout" className="submit" onClick={this.handleShout} >SHOUT!!</button>
@@ -341,7 +341,7 @@ class CanIUse extends Component {
             <input type="submit" id="canada" className="submit" name="submit" alt="In Canadian" value="Canadian" onClick={this.handleCanadian} />
           </form><br/>
           <div className="social">
-            <label className="textLabel" style={{marginLeft: 92}}>Send as SMS:</label>
+            <label className="textLabel">Send Text:</label>
             <input className="sms" type="tel" name="number" placeholder="15551234567" required />
             <button id="text" className="text" type="button" onClick={this.handleSMS}>Send</button><br/>
             <button id="clipboard" className="text" type="button" onclick={this.clipboard()}>Copy Text</button>
