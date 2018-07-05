@@ -325,11 +325,11 @@ class Greed extends Component {
           <form>
             <label>Change Noun:
               <input name="noun" className="noun" type="input" style={{marginLeft: 10, height: 20}}
-                placeholder={this.state.noun} onChange={this.handleChange} />
+                placeholder={this.state.noun} onBlur={this.handleChange} />
             </label><br />
             <label>Change From:
               <input name="from" className="from" type="input" style={{margin: 10, height: 20}}
-                placeholder={this.state.from} onChange={this.handleChange} />
+                placeholder={this.state.from} onBlur={this.handleChange} />
             </label><br />
             <button id="submit" className="submit" style={{marginLeft: 40, marginTop: 20}} onClick={this.handleSubmit}>Submit</button>
             <button id="shout" className="submit" onClick={this.handleShout} >SHOUT!!</button>

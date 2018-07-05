@@ -325,11 +325,11 @@ class Particular extends Component {
           <form>
             <label>Change Thing:
               <input name="thing" className="thing" type="input" style={{marginLeft: 10, height: 20}}
-                placeholder={this.state.thing} onChange={this.handleChange} />
+                placeholder={this.state.thing} onBlur={this.handleChange} />
             </label><br />
             <label style={{marginLeft: 6}}>Change From:
               <input name="from" className="from" type="input" style={{margin: 10, height: 20}}
-                placeholder={this.state.from} onChange={this.handleChange} />
+                placeholder={this.state.from} onBlur={this.handleChange} />
             </label><br />
             <button id="submit" className="submit" style={{marginLeft: 40, marginTop: 20}} onClick={this.handleSubmit}>Submit</button>
             <button id="shout" className="submit" onClick={this.handleShout} >SHOUT!!</button>

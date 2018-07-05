@@ -350,15 +350,15 @@ class Field extends Component {
           <form>
             <label style={{marginLeft: 41}}>Change Name:
               <input name="name" className="name" type="input" style={{marginLeft: 10, height: 20}}
-                placeholder={this.state.name} onChange={this.handleChange} />
+                placeholder={this.state.name} onBlur={this.handleChange} />
             </label><br />
             <label style={{marginLeft: 51}}>Change From:
               <input name="from" className="from" type="input" style={{marginLeft: 10, height: 20}}
-                placeholder={this.state.from} onChange={this.handleChange} />
+                placeholder={this.state.from} onBlur={this.handleChange} />
             </label><br />
             <label>Change Reference:
               <input name="reference" className="reference" type="input" style={{marginLeft: 10, height: 20}}
-                placeholder={this.state.reference} onChange={this.handleChange} />
+                placeholder={this.state.reference} onBlur={this.handleChange} />
             </label><br />
             <button id="submit" className="submit" style={{marginLeft: 40, marginTop: 20}} onClick={this.handleSubmit}>Submit</button>
             <button id="shout" className="submit" onClick={this.handleShout} >SHOUT!!</button>

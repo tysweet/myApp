@@ -97,7 +97,8 @@ dragHandle {
 }
 
 input {
-  font-size: 14px;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 20px;
 }
 
 .submit {

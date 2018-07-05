@@ -325,7 +325,7 @@ class CanIUse extends Component {
           <form>
           <label style={{marginLeft: 6}}>Change Tool:
               <input name="tool" className="tool" type="input" style={{marginLeft: 10, height: 20}}
-                placeholder={this.state.tool} onChange={this.handleChange} />
+                placeholder={this.state.tool} onBlur={this.handleChange} />
             </label><br />
             <label>Change From:
               <input name="from" className="from" type="input" style={{margin: 10, height: 20}}

@@ -350,15 +350,15 @@ class DoSomething extends Component {
           <form>
             <label style={{marginLeft: 68}}>Change Do:
               <input name="do" className="do" type="input" style={{marginLeft: 10, height: 20}}
-                placeholder={this.state.do} onChange={this.handleChange} />
+                placeholder={this.state.do} onBlur={this.handleChange} />
             </label><br />
             <label>Change Something:
               <input name="something" className="something" type="input" style={{marginLeft: 10, height: 20}}
-                placeholder={this.state.something} onChange={this.handleChange} />
+                placeholder={this.state.something} onBlur={this.handleChange} />
             </label><br />
             <label style={{marginLeft: 48}}>Change From:
               <input name="from" className="from" type="input" style={{marginLeft: 10, height: 20}}
-                placeholder={this.state.from} onChange={this.handleChange} />
+                placeholder={this.state.from} onBlur={this.handleChange} />
             </label><br />
             <button id="submit" className="submit" style={{marginLeft: 40, marginTop: 20}} onClick={this.handleSubmit}>Submit</button>
             <button id="shout" className="submit" onClick={this.handleShout} >SHOUT!!</button>
