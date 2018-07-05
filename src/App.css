@@ -2,7 +2,6 @@ header {
   display: inline;
   font-family: 'Great Vibes', cursive;
   font-size: 56px;
-  height: 200px;
   text-align: center;
 }
 
@@ -333,4 +332,11 @@ input.sms {
 
 #myBtn:hover {
   opacity: 0.75;
+}
+
+footer {
+  margin: 2em;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2em;
+  text-align: center;
 }
