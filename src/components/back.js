@@ -9,8 +9,8 @@ class Back extends Component {
     super(props);
     this.state = {
       value: '',
-      name: 'Bob',
-      from: 'Mom',
+      name: 'Todd',
+      from: 'Shay',
       message: '',
       subtitle: '',
     };

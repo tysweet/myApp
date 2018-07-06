@@ -9,7 +9,7 @@ class Fascinating extends Component {
     super(props);
     this.state = {
       value: '',
-      from: 'Mom',
+      from: 'Andrew',
       message: '',
       subtitle: '',
     };

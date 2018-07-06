@@ -9,7 +9,7 @@ class Horse extends Component {
     super(props);
     this.state = {
       value: '',
-      from: 'Mom',
+      from: 'Mike',
       message: '',
       subtitle: '',
     };

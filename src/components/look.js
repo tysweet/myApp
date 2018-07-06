@@ -9,8 +9,8 @@ class Look extends Component {
     super(props);
     this.state = {
       value: '',
-      name: 'Bob',
-      from: 'Mom',
+      name: 'Andrew',
+      from: 'Eric',
       message: '',
       subtitle: '',
     };

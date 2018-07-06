@@ -9,7 +9,7 @@ class Looking extends Component {
     super(props);
     this.state = {
       value: '',
-      from: 'Mom',
+      from: 'Krista',
       message: '',
       subtitle: '',
     };

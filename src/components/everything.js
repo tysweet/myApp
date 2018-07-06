@@ -9,7 +9,7 @@ class Everything extends Component {
     super(props);
     this.state = {
       value: '',
-      from: 'Mom',
+      from: 'Shay',
       message: '',
       subtitle: '',
     };

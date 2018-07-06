@@ -9,8 +9,8 @@ class Yoda extends Component {
     super(props);
     this.state = {
       value: '',
-      name: 'Luke',
-      from: 'Yoda',
+      name: 'Ty',
+      from: 'Keith',
       message: '',
       subtitle: '',
     };

@@ -9,7 +9,7 @@ class Immensity extends Component {
     super(props);
     this.state = {
       value: '',
-      from: 'Mom',
+      from: 'Eric',
       message: '',
       subtitle: '',
     };

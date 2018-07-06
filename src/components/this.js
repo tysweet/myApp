@@ -9,7 +9,7 @@ class This extends Component {
     super(props);
     this.state = {
       value: '',
-      from: 'Mom',
+      from: 'Matt',
       message: '',
       subtitle: '',
     };

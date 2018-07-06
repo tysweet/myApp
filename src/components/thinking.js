@@ -9,8 +9,8 @@ class Thinking extends Component {
     super(props);
     this.state = {
       value: '',
-      name: 'Bob',
-      from: 'Mom',
+      name: 'Ty',
+      from: 'Mike',
       message: '',
       subtitle: '',
     };

@@ -9,8 +9,8 @@ class Dalton extends Component {
     super(props);
     this.state = {
       value: '',
-      name: 'Bill',
-      from: 'Everyone',
+      name: 'Krista',
+      from: 'Cory',
       message: '',
       subtitle: '',
     };

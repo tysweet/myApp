@@ -9,7 +9,7 @@ class Cool extends Component {
     super(props);
     this.state = {
       value: '',
-      from: 'Mom',
+      from: 'Taylor',
       message: '',
       subtitle: '',
     };

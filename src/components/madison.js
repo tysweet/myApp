@@ -9,8 +9,8 @@ class Madison extends Component {
     super(props);
     this.state = {
       value: '',
-      name: 'Mr. Madison',
-      from: 'Principal',
+      name: 'Ty',
+      from: 'Wade',
       message: '',
       subtitle: '',
     };
