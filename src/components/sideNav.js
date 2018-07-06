@@ -30,11 +30,11 @@ export default class DrawerUndockedExample extends React.Component {
           width={200}
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})}>
-          <MenuItem onClick={this.handleClose} href="#icehole">Icehole</MenuItem>
           <MenuItem onClick={this.handleClose} href="#awesome">Awesome</MenuItem>
           <MenuItem onClick={this.handleClose} href="#back">Back</MenuItem>
           <MenuItem onClick={this.handleClose} href="#bag">Bag</MenuItem>
           <MenuItem onClick={this.handleClose} href="#bday">Birthday</MenuItem>
+          <MenuItem onClick={this.handleClose} href="#icehole">Icehole</MenuItem>
           <MenuItem onClick={this.handleClose} href="#because">Because</MenuItem>
           {/*<MenuItem onClick={this.handleClose} href="#blackadder">Black Adder</MenuItem>*/}
           <MenuItem onClick={this.handleClose} href="#bucket">Bucket</MenuItem>

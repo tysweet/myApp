@@ -9,7 +9,7 @@ class Zero extends Component {
     super(props);
     this.state = {
       value: '',
-      from: 'Mom',
+      from: 'Nathan',
       message: '',
       subtitle: '',
     };

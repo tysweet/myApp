@@ -100,10 +100,6 @@ input {
   border: 1px solid black;
 }
 
-input:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
 .submit {
   margin-bottom: 10px;
   margin-left: 30px;

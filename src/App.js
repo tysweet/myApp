@@ -76,25 +76,19 @@ import DrawerUndockedExample from './components/sideNav.js';
 
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  };
 
   render() {
     return (
       <div>
-        {/* <Alert /> */}
+        <Alert />
         <DrawerUndockedExample />
         <header><h1>Fudge Off - As A Service!</h1></header>
-        <Divider />
-        <Asshole />
         <Divider />
         <Awesome /><Divider />
         <Back /><Divider />
         <Bag /><Divider />
         <Bday /><Divider />
+        <Asshole /><Divider />
         <Because /><Divider />
         {/* <BlackAdder /><Divider /> */}
         <Bucket /><Divider />
