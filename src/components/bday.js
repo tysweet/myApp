@@ -42,7 +42,8 @@ class Bday extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Happy Freaking Birthday, " + name + "."});
+      // this.setState({message: "Happy Freaking Birthday, " + name + "."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -62,7 +63,8 @@ class Bday extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "HAPPY FREAKING BIRTHDAY, " + name.toUpperCase() + "!"});
+      // this.setState({message: "HAPPY FREAKING BIRTHDAY, " + name.toUpperCase() + "!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

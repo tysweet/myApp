@@ -42,7 +42,8 @@ class Xmas extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Merry Freaking Christmas, " + name + "."});
+      // this.setState({message: "Merry Freaking Christmas, " + name + "."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -62,7 +63,8 @@ class Xmas extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "MERRY FREAKING CHRISTMAS, " + name.toUpperCase() + "!"});
+      // this.setState({message: "MERRY FREAKING CHRISTMAS, " + name.toUpperCase() + "!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

@@ -40,7 +40,8 @@ class Looking extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Looking for a fig to give."});
+      // this.setState({message: "Looking for a fig to give."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Looking extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "LOOKING FOR A FIG TO GIVE!"});
+      // this.setState({message: "LOOKING FOR A FIG TO GIVE!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

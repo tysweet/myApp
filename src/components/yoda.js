@@ -42,7 +42,8 @@ class Yoda extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Fudge off, you must, " + name + "."});
+      // this.setState({message: "Fudge off, you must, " + name + "."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -62,7 +63,8 @@ class Yoda extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "FUDGE OFF, YOU MUST, " + name.toUpperCase() + "!"});
+      // this.setState({message: "FUDGE OFF, YOU MUST, " + name.toUpperCase() + "!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

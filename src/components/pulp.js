@@ -42,7 +42,8 @@ class Pulp extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: language + ", mothertrucker, do you speak it?"});
+      // this.setState({message: language + ", mothertrucker, do you speak it?"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -62,7 +63,8 @@ class Pulp extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: language.toUpperCase() + ", MOTHERTRUCKER, DO YOU SPEAK IT?!"});
+      // this.setState({message: language.toUpperCase() + ", MOTHERTRUCKER, DO YOU SPEAK IT?!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

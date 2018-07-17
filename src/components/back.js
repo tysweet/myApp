@@ -42,7 +42,8 @@ class Back extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: name + ", back the heck off."});
+      // this.setState({message: name + ", back the heck off."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -62,7 +63,8 @@ class Back extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: name.toUpperCase() + ", BACK THE HECK OFF!"});
+      // this.setState({message: name.toUpperCase() + ", BACK THE HECK OFF!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

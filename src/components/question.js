@@ -40,7 +40,8 @@ class Question extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "To fudge off, or to fudge off (that is not a question)..."});
+      // this.setState({message: "To fudge off, or to fudge off (that is not a question)..."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Question extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "TO FUDGE OFF, OR TO FUDGE OFF (THAT IS NOT A QUESTION)...!"});
+      // this.setState({message: "TO FUDGE OFF, OR TO FUDGE OFF (THAT IS NOT A QUESTION)...!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

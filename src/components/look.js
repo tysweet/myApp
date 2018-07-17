@@ -42,7 +42,8 @@ class Look extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: name + ", does it look like I give a fig?"});
+      // this.setState({message: name + ", does it look like I give a fig?"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -62,7 +63,8 @@ class Look extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: name.toUpperCase() + ", DOES IT LOOK LIKE I GIVE A FIG?!"});
+      // this.setState({message: name.toUpperCase() + ", DOES IT LOOK LIKE I GIVE A FIG?!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

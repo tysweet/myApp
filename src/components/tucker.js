@@ -40,7 +40,8 @@ class Tucker extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Come the heck in or fudge the heck off."});
+      // this.setState({message: "Come the heck in or fudge the heck off."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Tucker extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "COME THE HECK IN OR FUDGE THE HECK OFF!"});
+      // this.setState({message: "COME THE HECK IN OR FUDGE THE HECK OFF!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

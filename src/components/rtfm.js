@@ -40,7 +40,8 @@ class Rtfm extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Read the freaking manual!"});
+      // this.setState({message: "Read the freaking manual!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Rtfm extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "READ THE FREAKING MANUAL!!"});
+      // this.setState({message: "READ THE FREAKING MANUAL!!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

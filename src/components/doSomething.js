@@ -44,7 +44,8 @@ class DoSomething extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: doNow + " the freaking " + something +"!"});
+      // this.setState({message: doNow + " the freaking " + something +"!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -65,7 +66,8 @@ class DoSomething extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: doNow.toUpperCase() + " THE FREAKING " + something.toUpperCase() + "!"});
+      // this.setState({message: doNow.toUpperCase() + " THE FREAKING " + something.toUpperCase() + "!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

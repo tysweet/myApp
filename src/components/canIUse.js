@@ -42,7 +42,8 @@ class CanIUse extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Can you use " + tool + "?  Heck no!"});
+      // this.setState({message: "Can you use " + tool + "?  Heck no!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -62,7 +63,8 @@ class CanIUse extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "CAN YOU USE " + tool.toUpperCase() + "?!  HECK NO!!"});
+      // this.setState({message: "CAN YOU USE " + tool.toUpperCase() + "?!  HECK NO!!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

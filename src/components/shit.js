@@ -40,7 +40,8 @@ class Shit extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Forget this stuff!"});
+      // this.setState({message: "Forget this stuff!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Shit extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "FORGET THIS STUFF!!"});
+      // this.setState({message: "FORGET THIS STUFF!!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -293,7 +295,7 @@ class Shit extends Component {
   render() {
     return (
       <div style={{marginTop: 20}}>
-        <a id="stuff"></a>
+        <a id="shit"></a>
         <div className="container">
           <h1>{this.state.message}</h1>
           <h3>{this.state.subtitle}</h3>

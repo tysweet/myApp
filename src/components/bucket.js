@@ -40,7 +40,8 @@ class Bucket extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Please choke on a bucket of socks."});
+      // this.setState({message: "Please choke on a bucket of socks."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Bucket extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "PLEASE CHOKE ON A BUCKET OF SOCKS!"});
+      // this.setState({message: "PLEASE CHOKE ON A BUCKET OF SOCKS!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

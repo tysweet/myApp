@@ -40,7 +40,8 @@ class Zero extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Zero, that's the number of figs I give."});
+      // this.setState({message: "Zero, that's the number of figs I give."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Zero extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "ZERO, THAT'S THE NUMBER OF FIGS I GIVE!"});
+      // this.setState({message: "ZERO, THAT'S THE NUMBER OF FIGS I GIVE!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

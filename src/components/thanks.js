@@ -40,7 +40,8 @@ class Thanks extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Forget you very much."});
+      // this.setState({message: "Forget you very much."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Thanks extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "FORGET YOU VERY MUCH!"});
+      // this.setState({message: "FORGET YOU VERY MUCH!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

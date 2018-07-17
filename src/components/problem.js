@@ -42,7 +42,8 @@ class Problem extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "What the heck is your problem, " + name + "?"});
+      // this.setState({message: "What the heck is your problem, " + name + "?"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -62,7 +63,8 @@ class Problem extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "WHAT THE HECK IS YOUR PROBLEM, " + name.toUpperCase() + "?!"});
+      // this.setState({message: "WHAT THE HECK IS YOUR PROBLEM, " + name.toUpperCase() + "?!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

@@ -40,7 +40,8 @@ class Zayn extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Ask me if I give a mothertruck."});
+      // this.setState({message: "Ask me if I give a mothertruck."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Zayn extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "ASK ME IF I GIVE A MOTHERTRUCK!"});
+      // this.setState({message: "ASK ME IF I GIVE A MOTHERTRUCK!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

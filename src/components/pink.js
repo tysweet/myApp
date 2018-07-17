@@ -40,7 +40,8 @@ class Pink extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Well, fudge me pink."});
+      // this.setState({message: "Well, fudge me pink."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Pink extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "WELL, FUDGE ME PINK!"});
+      // this.setState({message: "WELL, FUDGE ME PINK!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

@@ -40,7 +40,8 @@ class Immensity extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "You can not imagine the immensity of the FIG I do not give."});
+      // this.setState({message: "You can not imagine the immensity of the FIG I do not give."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Immensity extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "YOU CAN NOT IMAGINE THE IMMENSITY OF THE FIG I DO NOT GIVE!"});
+      // this.setState({message: "YOU CAN NOT IMAGINE THE IMMENSITY OF THE FIG I DO NOT GIVE!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

@@ -40,7 +40,8 @@ class Flying extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "I don't give a flying fig."});
+      // this.setState({message: "I don't give a flying fig."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Flying extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "I DON'T GIVE A FLYING FIG!"});
+      // this.setState({message: "I DON'T GIVE A FLYING FIG!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

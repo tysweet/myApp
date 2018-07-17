@@ -40,7 +40,8 @@ class Fyyff extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Forget you, you freaking duck."});
+      // this.setState({message: "Forget you, you freaking duck."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Fyyff extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "FORGET YOU, YOU FREAKING DUCK!"});
+      // this.setState({message: "FORGET YOU, YOU FREAKING DUCK!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

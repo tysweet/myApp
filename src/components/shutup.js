@@ -42,7 +42,8 @@ class ShutUp extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: name + ", shut the fudge up."});
+      // this.setState({message: name + ", shut the fudge up."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -62,7 +63,8 @@ class ShutUp extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: name.toUpperCase() + ", SHUT THE FUDGE UP!"});
+      // this.setState({message: name.toUpperCase() + ", SHUT THE FUDGE UP!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

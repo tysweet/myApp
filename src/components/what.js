@@ -40,7 +40,8 @@ class What extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "What the heck?"});
+      this.setState({message: "What the fuck?"});
+      // this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class What extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "WHAT THE HECK?!"});
+      this.setState({message: "WHAT THE FUCK?!"});
+      // this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

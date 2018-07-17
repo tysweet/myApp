@@ -42,7 +42,8 @@ class Thinking extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: name + ", what the heck were you actually thinking?"});
+      // this.setState({message: name + ", what the heck were you actually thinking?"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -62,7 +63,8 @@ class Thinking extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: name.toUpperCase() + ", WHAT THE HECK WERE YOU ACTUALLY THINKING?!"});
+      // this.setState({message: name.toUpperCase() + ", WHAT THE HECK WERE YOU ACTUALLY THINKING?!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

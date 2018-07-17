@@ -40,7 +40,8 @@ class Maybe extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Maybe.  Maybe not.  Maybe fudge yourself."});
+      // this.setState({message: "Maybe.  Maybe not.  Maybe fudge yourself."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Maybe extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "MAYBE!  MAYBE NOT!  MAYBE FUDGE YOURSELF!"});
+      // this.setState({message: "MAYBE!  MAYBE NOT!  MAYBE FUDGE YOURSELF!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

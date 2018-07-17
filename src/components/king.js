@@ -42,7 +42,8 @@ class King extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Oh fudge off, just really fudge off you total brickface.  Christ, " + name + ", you are freaking dumb."});
+      // this.setState({message: "Oh fudge off, just really fudge off you total brickface.  Christ, " + name + ", you are freaking dumb."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -62,7 +63,8 @@ class King extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "OH FUDGE OFF, JUST REALLY FUDGE OFF YOU TOTAL BRICKFACE!  CHRIST, " + name.toUpperCase() + ", YOU ARE FREAKING DUMB!"});
+      // this.setState({message: "OH FUDGE OFF, JUST REALLY FUDGE OFF YOU TOTAL BRICKFACE!  CHRIST, " + name.toUpperCase() + ", YOU ARE FREAKING DUMB!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

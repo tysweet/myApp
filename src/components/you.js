@@ -42,7 +42,8 @@ class You extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Forget you, " + name + "."});
+      // this.setState({message: "Forget you, " + name + "."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -62,7 +63,8 @@ class You extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "FORGET YOU, " + name.toUpperCase() + "!"});
+      // this.setState({message: "FORGET YOU, " + name.toUpperCase() + "!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

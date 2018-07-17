@@ -42,7 +42,8 @@ class OffWith extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Fudge off with " + behavior + "."});
+      // this.setState({message: "Fudge off with " + behavior + "."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -62,7 +63,8 @@ class OffWith extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "FUDGE OFF WITH " + behavior.toUpperCase() + "!"});
+      // this.setState({message: "FUDGE OFF WITH " + behavior.toUpperCase() + "!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

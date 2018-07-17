@@ -42,7 +42,8 @@ class Dalton extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: name + ": A freaking problem solving super-hero..."});
+      // this.setState({message: name + ": A freaking problem solving super-hero..."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -62,7 +63,8 @@ class Dalton extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: name.toUpperCase() + ": A FREAKING PROBLEM SOLVING SUPER HERO..."});
+      // this.setState({message: name.toUpperCase() + ": A FREAKING PROBLEM SOLVING SUPER HERO..."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

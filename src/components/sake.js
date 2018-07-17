@@ -40,7 +40,8 @@ class Sake extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "For fig's sake!"});
+      // this.setState({message: "For fig's sake!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Sake extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "FOR FIG'S SAKE!!"});
+      // this.setState({message: "FOR FIG'S SAKE!!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

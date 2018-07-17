@@ -40,7 +40,8 @@ class Mornin extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Good freakin' mornin'!"});
+      // this.setState({message: "Good freakin' mornin'!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Mornin extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "GOOD FREAKIN' MORNIN'!"});
+      // this.setState({message: "GOOD FREAKIN' MORNIN'!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

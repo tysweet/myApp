@@ -42,7 +42,8 @@ class Thumbs extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Who has two thumbs and doesn't give a fig?  " + name + "."});
+      // this.setState({message: "Who has two thumbs and doesn't give a fig?  " + name + "."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -62,7 +63,8 @@ class Thumbs extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "WHO HAS TWO THUMBS AND DOESN'T GIVE A FIG?  " + name.toUpperCase() + "!"});
+      // this.setState({message: "WHO HAS TWO THUMBS AND DOESN'T GIVE A FIG?  " + name.toUpperCase() + "!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

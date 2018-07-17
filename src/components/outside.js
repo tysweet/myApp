@@ -42,7 +42,8 @@ class Outside extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: name + ", why don't you go outside and play hide-and-go-fudge-yourself?"});
+      // this.setState({message: name + ", why don't you go outside and play hide-and-go-fudge-yourself?"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -62,7 +63,8 @@ class Outside extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: name.toUpperCase() + ", WHY DON'T YOU GO OUTSIDE AND PLAY HIDE-AND-GO-FUDGE-YOURSELF?!"});
+      // this.setState({message: name.toUpperCase() + ", WHY DON'T YOU GO OUTSIDE AND PLAY HIDE-AND-GO-FUDGE-YOURSELF?!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

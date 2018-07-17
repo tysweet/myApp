@@ -40,7 +40,8 @@ class Cup extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "How about a nice cup of shut the heck up?"});
+      // this.setState({message: "How about a nice cup of shut the heck up?"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Cup extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "HOW ABOUT A NICE CUP OF SHUT THE HECK UP?!"});
+      // this.setState({message: "HOW ABOUT A NICE CUP OF SHUT THE HECK UP?!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

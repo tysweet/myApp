@@ -40,7 +40,8 @@ class Because extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Why? Because fudge you, that's why."});
+      // this.setState({message: "Why? Because fudge you, that's why."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Because extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "WHY?!  BECAUSE FUDGE YOU, THAT'S WHY!"});
+      // this.setState({message: "WHY?!  BECAUSE FUDGE YOU, THAT'S WHY!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

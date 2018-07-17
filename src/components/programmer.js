@@ -40,7 +40,8 @@ class Programmer extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Forget you, I'm a programmer, birch!"});
+      // this.setState({message: "Forget you, I'm a programmer, birch!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Programmer extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "FORGET YOU, I'M A PROGRAMMER, BIRCH!!"});
+      // this.setState({message: "FORGET YOU, I'M A PROGRAMMER, BIRCH!!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

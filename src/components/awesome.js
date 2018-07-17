@@ -41,7 +41,8 @@ class Awesome extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "This is freaking awesome."});
+      // this.setState({message: "This is freaking awesome."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -60,7 +61,8 @@ class Awesome extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "THIS IS FREAKING AWESOME!"});
+      // this.setState({message: "THIS IS FREAKING AWESOME!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

@@ -40,7 +40,8 @@ class Life extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Fudge my life."});
+      // this.setState({message: "Fudge my life."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Life extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "FUDGE MY LIFE!"});
+      // this.setState({message: "FUDGE MY LIFE!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

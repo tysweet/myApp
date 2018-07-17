@@ -42,7 +42,8 @@ class Ing extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Freaking fudge off, " + name + "."});
+      // this.setState({message: "Freaking fudge off, " + name + "."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -62,7 +63,8 @@ class Ing extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "FREAKING FUDGE OFF, " + name.toUpperCase() + "!"});
+      // this.setState({message: "FREAKING FUDGE OFF, " + name.toUpperCase() + "!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

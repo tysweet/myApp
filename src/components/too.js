@@ -40,7 +40,8 @@ class Too extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Thanks, forget you too."});
+      // this.setState({message: "Thanks, forget you too."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Too extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "THANKS, FORGET YOU TOO!"});
+      // this.setState({message: "THANKS, FORGET YOU TOO!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

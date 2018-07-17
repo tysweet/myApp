@@ -44,7 +44,8 @@ class Field extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "And " + name + " said unto " + from + ", 'Verily, cast thine eyes upon the field in which I grow my figs', and " + from + " gave witness unto the field, and saw that it was barren."});
+      // this.setState({message: "And " + name + " said unto " + from + ", 'Verily, cast thine eyes upon the field in which I grow my figs', and " + from + " gave witness unto the field, and saw that it was barren."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -65,7 +66,8 @@ class Field extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "AND " + name.toUpperCase() + " SAID UNTO " + from.toUpperCase() + ", 'VERILY, CAST THINE EYES UPON THE FIELD IN WHICH I GROW MY FIGS', AND " + from.toUpperCase() + " GAVE WITNESS UNTO THE FIELD, AND SAW THAT IT WAS BARREN!"});
+      // this.setState({message: "AND " + name.toUpperCase() + " SAID UNTO " + from.toUpperCase() + ", 'VERILY, CAST THINE EYES UPON THE FIELD IN WHICH I GROW MY FIGS', AND " + from.toUpperCase() + " GAVE WITNESS UNTO THE FIELD, AND SAW THAT IT WAS BARREN!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

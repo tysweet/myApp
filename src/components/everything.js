@@ -40,7 +40,8 @@ class Everything extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Forget everything."});
+      // this.setState({message: "Forget everything."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Everything extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "FORGET EVERYTHING!"});
+      // this.setState({message: "FORGET EVERYTHING!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

@@ -40,7 +40,8 @@ class Single extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Not a single fig was given."});
+      // this.setState({message: "Not a single fig was given."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Single extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "NOT A SINGLE FIG WAS GIVEN!"});
+      // this.setState({message: "NOT A SINGLE FIG WAS GIVEN!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

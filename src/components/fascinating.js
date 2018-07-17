@@ -40,7 +40,8 @@ class Fascinating extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Fascinating story, in what chapter do you shut the heck up?"});
+      // this.setState({message: "Fascinating story, in what chapter do you shut the heck up?"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Fascinating extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "FASCINATING STORY, IN WHAT CHAPTER DO YOU SHUT THE HECK UP?!"});
+      // this.setState({message: "FASCINATING STORY, IN WHAT CHAPTER DO YOU SHUT THE HECK UP?!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

@@ -42,7 +42,8 @@ class Chainsaw extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Enter me gently with a chainsaw, " + name + ".  Do I look like Mother Teresa?"});
+      // this.setState({message: "Enter me gently with a chainsaw, " + name + ".  Do I look like Mother Teresa?"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -62,7 +63,8 @@ class Chainsaw extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "ENTER ME GENTLY WITH A CHAINSAW, " + name.toUpperCase() + "!  DO I LOOK LIKE MOTHER TERESA?!"});
+      // this.setState({message: "ENTER ME GENTLY WITH A CHAINSAW, " + name.toUpperCase() + "!  DO I LOOK LIKE MOTHER TERESA?!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

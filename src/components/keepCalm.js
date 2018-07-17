@@ -42,7 +42,8 @@ class KeepCalm extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Keep the fudge calm and " + reaction + "."});
+      // this.setState({message: "Keep the fudge calm and " + reaction + "."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -62,7 +63,8 @@ class KeepCalm extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "KEEP THE FUDGE CALM AND " + reaction.toUpperCase() + "!"});
+      // this.setState({message: "KEEP THE FUDGE CALM AND " + reaction.toUpperCase() + "!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

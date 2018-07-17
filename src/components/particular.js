@@ -42,7 +42,8 @@ class Particular extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Fudge this " + thing + " in particular."});
+      // this.setState({message: "Fudge this " + thing + " in particular."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -62,7 +63,8 @@ class Particular extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "FUDGE THIS " + thing.toUpperCase() + " IN PARTICULAR!"});
+      // this.setState({message: "FUDGE THIS " + thing.toUpperCase() + " IN PARTICULAR!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

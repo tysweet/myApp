@@ -40,7 +40,8 @@ class Ridiculous extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "That's freaking ridiculous."});
+      // this.setState({message: "That's freaking ridiculous."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Ridiculous extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "THAT'S FREAKING RIDICULOUS!"});
+      // this.setState({message: "THAT'S FREAKING RIDICULOUS!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

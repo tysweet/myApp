@@ -40,7 +40,8 @@ class Bag extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Eat a bag of freaking dills."});
+      // this.setState({message: "Eat a bag of freaking dills."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Bag extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "EAT A BAG OF FREAKING DILLS!"});
+      // this.setState({message: "EAT A BAG OF FREAKING DILLS!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

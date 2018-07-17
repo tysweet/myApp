@@ -40,7 +40,8 @@ class Horse extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "Forget you and the horse you rode in on."});
+      // this.setState({message: "Forget you and the horse you rode in on."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -59,7 +60,8 @@ class Horse extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: "FORGET YOU AND THE HORSE YOU RODE IN ON!"});
+      // this.setState({message: "FORGET YOU AND THE HORSE YOU RODE IN ON!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }

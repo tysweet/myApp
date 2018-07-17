@@ -42,7 +42,8 @@ class Keep extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: name + ": Fudge off. And when you get there, fudge off from there too. Then fudge off some more. Keep fudging off until you get back here. Then fudge off again."});
+      // this.setState({message: name + ": Fudge off. And when you get there, fudge off from there too. Then fudge off some more. Keep fudging off until you get back here. Then fudge off again."});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
@@ -62,7 +63,8 @@ class Keep extends Component {
     .then((json) => {
       let message = json.message;
       let subtitle = json.subtitle;
-      this.setState({message: name.toUpperCase() + ": FUDGE OFF. AND WHEN YOU GET THERE, FUDGE OFF FROM THERE TOO. THEN FUDGE OFF SOME MORE. KEEP FUDGING OFF UNTIL YOU GET BACK HERE. THEN FUDGE OFF AGAIN!"});
+      // this.setState({message: name.toUpperCase() + ": FUDGE OFF. AND WHEN YOU GET THERE, FUDGE OFF FROM THERE TOO. THEN FUDGE OFF SOME MORE. KEEP FUDGING OFF UNTIL YOU GET BACK HERE. THEN FUDGE OFF AGAIN!"});
+      this.setState({message: message});
       this.setState({subtitle: subtitle});
     })
   }
